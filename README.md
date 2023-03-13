@@ -1,4 +1,4 @@
-# SPP1630Harbours-RDF
+# SPP1630Harbours Linked Open Data
 
 Currently built from the following data:
 
