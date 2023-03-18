@@ -13,7 +13,7 @@ triples.add("<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.o
 triples.add("<http://www.opengis.net/ont/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .\n")
 triples.add("<http://www.opengis.net/ont/sf#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .\n")
 triples.add("<"+str(nsont)+"Harbour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .\n")
-with open('HarbourDataRepository_001_Kroeger_2018.csv', newline='', encoding="utf-8") as csvfile:
+with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encoding="utf-8") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         print(row)
