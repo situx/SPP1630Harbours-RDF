@@ -27,6 +27,7 @@ with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encod
         triples.add("<"+str(cururi)+"> <http://www.opengis.net/ont/geosparql#hasGeometry> <"+str(cururi)+"_geom> .\n")
         triples.add("<"+str(cururi)+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(row["Name_mod"]).replace("\"","'")+"\"@en .\n")
         triples.add("<"+str(cururi)+"> <http://www.wikidata.org/prop/direct/P206> \""+str(row["Hydro_name_mod"]).replace("\"","'")+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
+        triples.add("<"+str(cururi)+"> <"+str(nsont)+"locationSecure> \""+str(row["Locat_secure"]).replace("\"","'")+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
         if row["Project"] in projectmap:
            triples.add("<"+str(cururi)+"> <http://purl.org/cerif/frapo/isOutputOf> <"+projectmap[str(row["Project"])]+"> .\n <"+projectmap[str(row["Project"])]+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/Project> .\n <"+projectmap[str(row["Project"])]+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(row["Project"])+"\"@en .\n")
         else:
