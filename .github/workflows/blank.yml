@@ -22,7 +22,7 @@ jobs:
     with: 
         rdffilepath: spp_result.ttl
         docpath: docs
-        prefixns: http://www.spp-haefen.de/data/
+        prefixns: http://data.archaeology.link/data/spphaefen/
         prefixnsshort: spp
         indexpages: true
         createcollections: true
