@@ -27,6 +27,7 @@ jobs:
         indexpages: true
         createcollections: true
         createnonNSPages: true
+        createVOWL: true
         preferredlang: en
         license: CC BY-NC-SA 4.0
         ghpages: true
