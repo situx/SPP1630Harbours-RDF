@@ -18,10 +18,10 @@ def bibtexToRDF(triples,entries,ns,nsont):
     for entry in entries:
         bibmap[str(entry["ID"])[0:str(entry["ID"]).rfind("_")].replace("_"," ").strip()]=ns+"bib_"+str(entry["ID"])
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
-        if str(typeToURI[entry["ENTRYTYPE"]])!="misc":
-            triples.add("<"+str(typeToURI[entry["ENTRYTYPE"]])+"> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .\n")
-            triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n")
-            triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> \"Document\"@en .\n")
+        #if str(typeToURI[entry["ENTRYTYPE"]])!="misc":
+        #    triples.add("<"+str(typeToURI[entry["ENTRYTYPE"]])+"> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .\n")
+        #    triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n")
+        #    triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> \"Document\"@en .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"]).replace("\"","'")+"\"@en .\n") 
         if "issn" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issn> \""+str(entry["issn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
