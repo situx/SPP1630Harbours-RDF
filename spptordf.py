@@ -38,7 +38,7 @@ def bibtexToRDF(triples,entries,ns,nsont):
             authoruri=authoruri.replace("__","_")
             authoruri=authoruri.strip()
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n")
-            triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> \""+str(entry["author"])+"\"@en .\n")
+            triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["author"])+"\"@en .\n")
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/family_Name> \""+str(entry["author"])[0:str(entry["author"]).rfind(',')]+"\"@en .\n")
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/firstName> \""+str(entry["author"])[str(entry["author"]).rfind(',')+1:].strip()+"\"@en .\n")
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> <"+ns+"author_"+str(authoruri)+"> .\n")
@@ -48,7 +48,7 @@ def bibtexToRDF(triples,entries,ns,nsont):
     return {"triples":triples,"bibmap":bibmap}
 
 
-with open('source/spp.bib') as bibtex_file:
+with open('source/spp.bib',encoding="utf-8") as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file)
 print(bib_database.entries)
 
