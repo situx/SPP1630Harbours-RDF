@@ -16,10 +16,18 @@ def bibtexToRDF(triples,entries,ns,nsont):
     typeToURI={"article":"http://purl.org/ontology/bibo/Article","book":"http://purl.org/ontology/bibo/Book"}
     bibmap={}
     for entry in entries:
-        bibmap[str(entry["ID"])[0:str(entry["ID"]).rfind("_")]]=ns+"bib_"+str(entry["ID"])
+        bibmap[str(entry["ID"])[0:str(entry["ID"]).rfind("_")].replace("_"," ").strip()]=ns+"bib_"+str(entry["ID"])
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n")
+        if "publisher" in entry:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/publisher> \""+str(entry["publisher"])+"\" .\n")
+        if "pages" in entry:
+            if "--" in entry["pages"]:
+                pagestart=entry["pages"][0:entry["pages"].rfind("--")]
+                pageend=entry["pages"][entry["pages"].rfind("--")+2:]
+                triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/pageStart> \""+str(pagestart)+"\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n")
+                triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/pageEnd> \""+str(pageend)+"\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n")
         if "and" in entry["author"]:
             for author in entry["author"].split("and"):
                 if "," in author:
@@ -115,11 +123,14 @@ with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encod
             triples.add("<"+str(cururi)+"> <http://www.w3.org/2000/01/rdf-schema#comment> \"\"\""+row["Comments"].replace("\"","'")+"\"\"\"@en .\n")
         if "Ref_mod" in row and row["Ref_mod"]!="":
             refs= row["Ref_mod"].split(";")
-            for ref in refs:
+            for cref in refs:
+                ref=cref
+                if "," in cref:
+                    ref=cref[0:cref.rfind(",")]
                 if ref in bibmap:
-                    triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> "+str(bibmap[ref])+" . \n")
+                    triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> <"+str(bibmap[ref])+"> . \n")
             if row["Ref_mod"] in bibmap:
-                triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> "+str(bibmap[row["Ref_mod"]])+" . \n")
+                triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> <"+str(bibmap[row["Ref_mod"]])+"> . \n")
             triples.add("<"+str(cururi)+"> <http://www.w3.org/2004/02/skos/core#note> \"\"\""+row["Ref_mod"]+"\"\"\" .\n")
 
 with open("spp_result.ttl","w",encoding="utf-8") as resfile:
