@@ -118,6 +118,8 @@ with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encod
             for ref in refs:
                 if ref in bibmap:
                     triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> "+str(bibmap[ref])+" . \n")
+            if row["Ref_mod"] in bibmap:
+                triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> "+str(bibmap[row["Ref_mod"]])+" . \n")
             triples.add("<"+str(cururi)+"> <http://www.w3.org/2004/02/skos/core#note> \"\"\""+row["Ref_mod"]+"\"\"\" .\n")
 
 with open("spp_result.ttl","w",encoding="utf-8") as resfile:
