@@ -13,13 +13,17 @@ bodyofwater={"Ladoga":"http://www.wikidata.org/entity/Q15288","Barup Sø":"http:
 
 
 def bibtexToRDF(triples,entries,ns,nsont):
-    typeToURI={"article":"http://purl.org/ontology/bibo/Article","book":"http://purl.org/ontology/bibo/Book"}
+    typeToURI={"article":"http://purl.org/ontology/bibo/Article","book":"http://purl.org/ontology/bibo/Book","phdthesis":"http://purl.org/ontology/bibo/Thesis"}
     bibmap={}
     for entry in entries:
         bibmap[str(entry["ID"])[0:str(entry["ID"]).rfind("_")].replace("_"," ").strip()]=ns+"bib_"+str(entry["ID"])
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
-        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n") 
+        if "number" in entry:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/number> \""+str(entry["number"])+"\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n")
+        if "volume" in entry:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/volume> \""+str(entry["volume"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
         if "publisher" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/publisher> \""+str(entry["publisher"])+"\" .\n")
         if "pages" in entry:
