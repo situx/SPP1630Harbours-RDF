@@ -20,7 +20,8 @@ def bibtexToRDF(triples,entries,ns,nsont):
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
         if str(typeToURI[entry["ENTRYTYPE"]])!="misc":
             triples.add("<"+str(typeToURI[entry["ENTRYTYPE"]])+"> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .\n")
-        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
+            triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n")
+            triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> \"Document\"@en .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n") 
         if "issn" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issn> \""+str(entry["issn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
@@ -76,6 +77,8 @@ triples=set()
 bibres=bibtexToRDF(triples,bib_database.entries,ns,nsont)
 triples=bibres["triples"]
 bibmap=bibres["bibmap"]
+triples.add("<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n")
+triples.add("<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> \"spatial object\"@en .\n")
 triples.add("<http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .\n")
 triples.add("<http://www.opengis.net/ont/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .\n")
 triples.add("<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .\n")
