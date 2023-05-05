@@ -28,9 +28,9 @@ def bibtexToRDF(triples,entries,ns,nsont):
                     authoruri=authoruri.replace("__","_")
                     authoruri=authoruri.strip()
                     triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n")
-                    triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> \""+str(author)+"\"@en .\n")
+                    triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(author)+"\"@en .\n")
                     triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/family_Name> \""+str(author)[0:str(author).rfind(',')]+"\"@en .\n")
-                    triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/firstName> \""+str(author)[str(author).rfind(','):]+"\"@en .\n")
+                    triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/firstName> \""+str(author)[str(author).rfind(',')+1:].strip()+"\"@en .\n")
                     triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> <"+ns+"author_"+str(authoruri)+"> .\n")
         else:
             authoruri=str(entry["author"]).replace(","," ")
@@ -40,9 +40,8 @@ def bibtexToRDF(triples,entries,ns,nsont):
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .\n")
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#label> \""+str(entry["author"])+"\"@en .\n")
             triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/family_Name> \""+str(entry["author"])[0:str(entry["author"]).rfind(',')]+"\"@en .\n")
-            triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/firstName> \""+str(entry["author"])[str(entry["author"]).rfind(','):]+"\"@en .\n")
+            triples.add("<"+ns+"author_"+str(authoruri)+"> <http://xmlns.com/foaf/0.1/firstName> \""+str(entry["author"])[str(entry["author"]).rfind(',')+1:].strip()+"\"@en .\n")
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> <"+ns+"author_"+str(authoruri)+"> .\n")
-        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> \""+str(entry["author"])+"\" .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/created> \""+str(entry["year"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "doi" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/doi> \""+str(entry["doi"])+"\"^^<http://www.w3.org/2001/XMLSchema#anyURI> .\n")
