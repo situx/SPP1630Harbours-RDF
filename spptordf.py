@@ -16,13 +16,13 @@ bodyofwater={"Altmühl":"http://www.wikidata.org/entity/Q317060","Bederkesaer":"
 def bibtexToRDF(triples,entries,ns,nsont):
     typeToURI={"article":"http://purl.org/ontology/bibo/Article","book":"http://purl.org/ontology/bibo/Book"}
     for entry in entries:
-        triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
-        triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
-        triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n")
-        triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> \""+str(entry["author"])+"\" .\n")
-        triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/created> \""+str(entry["year"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/creator> \""+str(entry["author"])+"\" .\n")
+        triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/created> \""+str(entry["year"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "doi" in entry:
-            triples.add("<"+ns+"_bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/doi> \""+str(entry["doi"])+"\"^^<http://www.w3.org/2001/XMLSchema#anyURI> .\n")
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/doi> \""+str(entry["doi"])+"\"^^<http://www.w3.org/2001/XMLSchema#anyURI> .\n")
     return triples
 
 
