@@ -20,6 +20,10 @@ def bibtexToRDF(triples,entries,ns,nsont):
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["title"])+"\"@en .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"])+"\"@en .\n") 
+        if "issn" in entry:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issn> \""+str(entry["issn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
+        if "isbn" in entry:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/isbn> \""+str(entry["isbn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")              
         if "number" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/number> \""+str(entry["number"])+"\"^^<http://www.w3.org/2001/XMLSchema#integer> .\n")
         if "volume" in entry:
