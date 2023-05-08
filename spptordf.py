@@ -151,9 +151,21 @@ with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encod
         else:
             triples.add("<"+str(cururi)+"> <http://www.wikidata.org/prop/direct/P17> \""+str(row["Country"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
         if "Date_min" in row and row["Date_min"].strip()!="":
-            triples.add("<"+str(cururi)+"> <"+str(nsont)+"date_min> \""+str(row["Date_min"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
+            triples.add("<"+str(cururi)+"> <http://www.w3.org/2006/time#hasTime> <"+str(cururi)+"_foundation> .\n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/2000/01/rdf-schema#label> \"\"\""+str(row["Name_mod"]).replace("\"","'")+" Foundation\"\"\"@en. \n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#TemporalEntity> . \n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/2006/time#hasBeginning> <"+str(cururi)+"_foundation_beginning> . \n")
+            triples.add("<"+str(cururi)+"_foundation_beginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> . \n")
+            triples.add("<"+str(cururi)+"_foundation_beginning> <http://www.w3.org/2000/01/rdf-schema#label> \"\"\""+str(row["Name_mod"]).replace("\"","'")+" Foundation Beginning\"\"\"@en. \n")
+            triples.add("<"+str(cururi)+"_foundation_beginning> <http://www.w3.org/2006/time#inXSDgYear>  \"\"\""+str(row["Date_min"])+"\"\"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "Date_max" in row and row["Date_max"].strip()!="":
-            triples.add("<"+str(cururi)+"> <"+str(nsont)+"date_max> \""+str(row["Date_max"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
+            triples.add("<"+str(cururi)+"> <http://www.w3.org/2006/time#hasTime> <"+str(cururi)+"_foundation> .\n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/2000/01/rdf-schema#label> \"\"\""+str(row["Name_mod"]).replace("\"","'")+" Foundation\"\"\"@en. \n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#TemporalEntity> . \n")
+            triples.add("<"+str(cururi)+"_foundation> <http://www.w3.org/2006/time#hasBeginning> <"+str(cururi)+"_foundation_beginning> . \n")
+            triples.add("<"+str(cururi)+"_foundation_end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> . \n")
+            triples.add("<"+str(cururi)+"_foundation_end> <http://www.w3.org/2000/01/rdf-schema#label> \"\"\""+str(row["Name_mod"]).replace("\"","'")+" Foundation End\"\"\"@en. \n")
+            triples.add("<"+str(cururi)+"_foundation_end> <http://www.w3.org/2006/time#inXSDgYear>  \"\"\""+str(row["Date_max"])+"\"\"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "Place_technique" in row and row["Place_technique"].strip()!="":
             if row["Place_technique"] in place_technique:
                 triples.add("<"+str(cururi)+"> <"+str(nsont)+"place_technique> <"+str(place_technique[row["Place_technique"]])+"> .\n")
