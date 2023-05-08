@@ -186,6 +186,6 @@ with open("spp_result.ttl","w",encoding="utf-8") as resfile:
     resfile.write("".join(triples))
     resfile.close()
 
-#g=Graph()
-#g.parse("spp_result.ttl")
-#g.serialize("spp_result.ttl")
+g=Graph()
+g.parse("spp_result.ttl")
+g.serialize("spp_result.ttl")
