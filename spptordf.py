@@ -77,7 +77,7 @@ def processReference(triples,bibmap,key,row,cururi):
     for cref in refs:
         ref=cref
         if "," in cref:
-            ref=cref[0:cref.rfind(",")]
+            ref=cref[0:cref.rfind(",")].strip()
         if ref in bibmap:
             triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/isReferencedBy> <"+str(bibmap[ref])+"> . \n")
             gotref=True
