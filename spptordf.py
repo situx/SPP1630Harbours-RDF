@@ -6,6 +6,7 @@ from rdflib import Graph
 
 authormap={"L. Kröger":"http://data.archaeology.link/data/spphaefen/l_kroeger","M. Foucher":"http://data.archaeology.link/data/spphaefen/m_foucher"}
 publicationmap={}
+issuers={"Bonner Jahrbücher":"http://www.wikidata.org/entity/Q892739","The International journal of nautical archaeology":"http://www.wikidata.org/entity/Q15750622","International Journal of Nautical Archaeology":"http://www.wikidata.org/entity/Q15750622","Journal of Danish Archaeology":"http://www.wikidata.org/entity/Q15765043","Bulletin de la Société préhistorique francaise":"http://www.wikidata.org/entity/Q2928058"}
 publishers={"Taylor & Francis":"http://www.wikidata.org/entity/Q880582","Verlag der österreichischen Akademie der Wissenschaften":"http://www.wikidata.org/entity/Q1601032"}
 projectmap={"SPP-Im Netzwerk fluvialer Häfen":"https://gepris.dfg.de/gepris/projekt/198801704","Binnenhäfen/Inland harbours":"https://gepris.dfg.de/gepris/projekt/219647198"}
 place_technique={"logboat":"http://www.wikidata.org/entity/Q596073","keelboat":"http://www.wikidata.org/entity/Q60520969","flat-bottomed vessel":"http://www.wikidata.org/entity/Q5457690","raft":"http://www.wikidata.org/entity/Q200433"}
@@ -43,7 +44,12 @@ def bibtexToRDF(triples,entries,ns,nsont):
             else:
                 triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/terms/publisher> \""+str(entry["publisher"])+"\" .\n")
         if "journal" in entry:
-            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issuer> \""+str(entry["journal"])+"\" .\n")
+            if entry["journal"] in issuers:
+                triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issuer> <"+issuers[str(entry["journal"])]+"> .\n")
+                triples.add("<"+issuers[str(entry["journal"])]+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/bibo/Journal> .\n")
+                triples.add("<"+issuers[str(entry["journal"])]+"> <http://www.w3.org/2000/01/rdf-schema#label> \""+str(entry["journal"])+"\"@en .\n")
+            else:
+                triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issuer> \""+str(entry["journal"])+"\" .\n")
         if "pages" in entry:
             if "--" in entry["pages"]:
                 pagestart=entry["pages"][0:entry["pages"].rfind("--")]
