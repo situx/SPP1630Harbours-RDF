@@ -69,7 +69,6 @@ def bibtexToRDF(triples,entries,ns,nsont):
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/created> \""+str(entry["year"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "doi" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/doi> \""+str(entry["doi"]).replace("\_","_")+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
-
     return {"triples":triples,"bibmap":bibmap}
 
 def processReference(triples,bibmap,key,row,cururi):
