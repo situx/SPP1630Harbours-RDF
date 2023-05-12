@@ -31,4 +31,5 @@ jobs:
         metadatatable: true
         preferredlang: en
         license: CC BY-NC-SA 4.0
+        startconcept: http://data.archaeology.link/data/Harbour_collection
         ghpages: true
