@@ -15,21 +15,23 @@ bodyofwater={"Foulness":"http://www.wikidata.org/entity/Q7337427","Hanerau":"htt
 refnotfound=set()
 countrynotfound=set()
 
-def bibtexToRDF(triples,entries,ns,nsont):
+def bibtexToRDF(triples,entries,ns,nsont,creatormode=None):
     typeToURI={"report":"http://purl.org/ontology/bibo/Report","incollection":"http://purl.org/ontology/bibo/Collection","inbook":"http://purl.org/ontology/bibo/BookSection","inproceedings":"http://purl.org/ontology/bibo/Proceedings","article":"http://purl.org/ontology/bibo/Article","book":"http://purl.org/ontology/bibo/Book","phdthesis":"http://purl.org/ontology/bibo/Thesis","misc":"http://purl.org/ontology/bibo/Document"}
     bibmap={}
+    dsuri=None
     for entry in entries:
         bibmap[str(entry["ID"])[0:str(entry["ID"]).rfind("_")].replace("_"," ").strip()]=ns+"bib_"+str(entry["ID"])
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
-        #if str(typeToURI[entry["ENTRYTYPE"]])!="misc":
-        #    triples.add("<"+str(typeToURI[entry["ENTRYTYPE"]])+"> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> .\n")
-        #    triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .\n")
-        #    triples.add("<http://purl.org/ontology/bibo/Document> <http://www.w3.org/2000/01/rdf-schema#label> \"Document\"@en .\n")
+        if creatormode!=None:
+           triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Dataset> .\n")
+           dsuri=ns+"bib_"+str(entry["ID"])
+        else:
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(typeToURI[entry["ENTRYTYPE"]])+"> .\n")
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/title> \""+str(entry["title"]).replace("\"","'")+"\"@en .\n") 
         if "issn" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/issn> \""+str(entry["issn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
         if "eissn" in entry:
-            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/eissn> \""+str(entry["issn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
+            triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/eissn> \""+str(entry["eissn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
         if "isbn" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/isbn> \""+str(entry["isbn"])+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")              
         if "number" in entry:
@@ -81,7 +83,8 @@ def bibtexToRDF(triples,entries,ns,nsont):
         triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/dc/elements/1.1/created> \""+str(entry["year"])+"\"^^<http://www.w3.org/2001/XMLSchema#gYear> .\n")
         if "doi" in entry:
             triples.add("<"+ns+"bib_"+str(entry["ID"])+"> <http://purl.org/ontology/bibo/doi> \""+str(entry["doi"]).replace("\_","_")+"\"^^<http://www.w3.org/2001/XMLSchema#string> .\n")
-    return {"triples":triples,"bibmap":bibmap}
+
+    return {"triples":triples,"bibmap":bibmap,"dsuri":dsuri}
 
 def processReference(triples,bibmap,key,row,cururi):
     refs=row[key].split(";")
@@ -112,9 +115,16 @@ with open('source/spp.bib',encoding="utf-8") as bibtex_file:
     bib_database = bibtexparser.load(bibtex_file)
 print(bib_database.entries)
 
+with open('source/spp_creator.bib',encoding="utf-8") as bibtex_file:
+    bib_creator = bibtexparser.load(bibtex_file)
+print(bib_creator.entries)
+
 ns="http://data.archaeology.link/data/spphaefen/"
 nsont="http://www.spp-haefen.de/ont#"
 triples=set()
+bibres=bibtexToRDF(triples,bib_creator.entries,ns,nsont,True)
+triples=bibres["triples"]
+dsuri=bibres["dsuri"]
 bibres=bibtexToRDF(triples,bib_database.entries,ns,nsont)
 triples=bibres["triples"]
 bibmap=bibres["bibmap"]
@@ -138,6 +148,8 @@ with open('source/HarbourDataRepository_001_Kroeger_2018.csv', newline='', encod
         #print(cururi)
         triples.add("<"+str(cururi)+"> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <"+str(nsont)+"Harbour> .\n")
         triples.add("<"+str(cururi)+"> <http://www.opengis.net/ont/geosparql#hasGeometry> <"+str(cururi)+"_geom> .\n")
+        if dsuri!=None:
+            triples.add("<"+str(cururi)+"> <http://purl.org/dc/terms/partOf> <"+str(dsuri)+"> .\n")
         if row["Author"] in authormap:
             triples.add("<"+str(cururi)+"> <http://purl.org/dc/elements/1.1/creator> <"+str(authormap[row["Author"]])+"> .\n")
             triples.add("<"+str(authormap[row["Author"]])+"><http://www.w3.org/2000/01/rdf-schema#label> \""+str(row["Author"])+"\"@en  .\n")
