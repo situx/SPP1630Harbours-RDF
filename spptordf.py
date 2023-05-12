@@ -86,7 +86,7 @@ def bibtexToRDF(triples,entries,ns,nsont):
 def processReference(triples,bibmap,key,row,cururi):
     refs=row[key].split(";")
     for cref in refs:
-        ref=cref
+        ref=cref.strip()
         if "," in cref:
             ref=cref[0:cref.rfind(",")].strip()
         if ref in bibmap:
