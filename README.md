@@ -1,5 +1,7 @@
 # SPP1630Harbours Linked Open Data
   
 Currently built from the following data: 
-   
-Kröger, L. (2018). Within The Network Of Fluvial Ports : Database (csv) [Data set]. In L. Kröger, Within The Network Of Fluvial Ports (Vol. 1). https://doi.org/10.22032/dbt.35241
+
+The dataset [spp_result.ttl](https://github.com/archaeolink/SPP1630Harbours-RDF/blob/main/spp_result.ttl) is a derivative of [Kröger, Lars, Within The Network Of Fluvial Ports : Database (csv)](https://www.db-thueringen.de/receive/dbt_mods_00035241). In: Within The Network Of Fluvial Ports. Jena. 2018. published under a [CC BY-NC-SA 3.0 Licence](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
