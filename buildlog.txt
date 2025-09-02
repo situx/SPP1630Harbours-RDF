@@ -1,10 +1,10 @@
 Selected Execution Statistics in order of execution:
-Create Collections: 0.3847317695617676 seconds
-Graph Analysis: 1.7635321617126465 seconds
-Class Tree Generation: 4.600847005844116 seconds for 25 items, about 0.18403388023376466 seconds per item
-Void stats generation: 0.04724287986755371 seconds for 25 items, about 0.0018897151947021484 seconds per item
-HTML Generation: 94.04844427108765 seconds for 11883 items, about 0.007914537092576591 seconds per item
-Finalize Classtree: 0.0047533512115478516 seconds
-NonNS Pages: 1.0665111541748047 seconds for 591 items, about 0.0018045874013110062 seconds per item
-Index Page Creation: 3.76277494430542 seconds
-Total measured execution time: 105.6788375377655 seconds
+Create Collections: 0.3927783966064453 seconds
+Graph Analysis: 1.7768797874450684 seconds
+Class Tree Generation: 4.569960594177246 seconds for 25 items, about 0.18279842376708985 seconds per item
+Void stats generation: 0.04818987846374512 seconds for 25 items, about 0.0019275951385498047 seconds per item
+HTML Generation: 98.68304800987244 seconds for 11883 items, about 0.008304556762591302 seconds per item
+Finalize Classtree: 0.004024982452392578 seconds
+NonNS Pages: 1.1147356033325195 seconds for 591 items, about 0.0018861854540313358 seconds per item
+Index Page Creation: 3.835792303085327 seconds
+Total measured execution time: 110.42540955543518 seconds
