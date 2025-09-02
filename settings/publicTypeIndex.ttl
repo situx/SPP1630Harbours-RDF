@@ -2,14 +2,34 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix ns1: <http://www.w3.org/ns/solid/terms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://purl.org/vocommons/voaf#DatasetOccurrence> a owl:Class .
+
+<http://purl.org/vocommons/voaf#Vocabulary> a owl:Class .
+
+void:Dataset a owl:Class .
+
+void:Linkset a owl:Class .
+
+owl:DatatypeProperty a owl:Class .
+
+owl:ObjectProperty a owl:Class .
+
+<http://www.w3.org/ns/adms#Asset> a owl:Class .
+
+<http://www.w3.org/ns/adms#AssetDistribution> a owl:Class .
+
+<http://www.w3.org/ns/adms#AssetRepository> a owl:Class .
 
 <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl> a <http://www.w3.org/ns/ldp#RDFResource>,
         ns1:ListedDocument,
-        ns1:TypeIndex ;
-    rdfs:label "Public Type Index"@en ;
+        ns1:TypeIndex,
+        "Public Type Index"@en ;
     rdfs:comment "This Document contains a list of links to other Documents, along with the type of data that is to be included in those Documents"@en ;
     rdfs:member <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#1>,
         <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#10>,
@@ -11903,6 +11923,22 @@
         <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#nonns_Q892739.html>,
         <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#nonns_Q91015398.html>,
         <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#nonns_Q97623887.html> .
+
+<http://purl.org/ontology/bibo/BookSection> a owl:Class .
+
+geo:FeatureCollection a owl:Class ;
+    rdfs:subClassOf geo:SpatialObjectCollection .
+
+geo:GeometryCollection a owl:Class ;
+    rdfs:subClassOf geo:SpatialObjectCollection .
+
+<http://www.w3.org/2006/vcard/ns#Group> a owl:Class ;
+    rdfs:subClassOf skos:Collection .
+
+dcat:Catalog a owl:Class ;
+    rdfs:subClassOf skos:Collection .
+
+dcat:Dataset a owl:Class .
 
 <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#1> ns1:forClass <http://www.spp-haefen.de/ont#Harbour> ;
     ns1:instance <https://situx.github.io/SPP1630Harbours-RDF//1> .
@@ -47580,4 +47616,50 @@
 
 <https://situx.github.io/SPP1630Harbours-RDF//settings/publicTypeIndex.ttl#nonns_Q97623887.html> ns1:forClass <http://purl.org/ontology/bibo/Journal> ;
     ns1:instance <https://situx.github.io/SPP1630Harbours-RDF//nonns_Q97623887.html> .
+
+<http://purl.org/cerif/frapo/Project> a owl:Class .
+
+geo:Feature a owl:Class ;
+    rdfs:subClassOf geo:SpatialObject .
+
+geo:Geometry a owl:Class ;
+    rdfs:subClassOf geo:SpatialObject .
+
+geo:SpatialObject a owl:Class .
+
+<http://purl.org/ontology/bibo/Document> a owl:Class .
+
+<http://purl.org/ontology/bibo/Thesis> a owl:Class .
+
+geo:SpatialObjectCollection a owl:Class ;
+    rdfs:subClassOf skos:Collection .
+
+<http://purl.org/ontology/bibo/Collection> a owl:Class ;
+    rdfs:subClassOf skos:Collection .
+
+skos:Collection a owl:Class .
+
+foaf:Organization a owl:Class .
+
+<http://purl.org/ontology/bibo/Proceedings> a owl:Class .
+
+<http://purl.org/ontology/bibo/Journal> a owl:Class .
+
+<http://purl.org/ontology/bibo/Book> a owl:Class .
+
+owl:Class a owl:Class .
+
+<http://purl.org/ontology/bibo/Article> a owl:Class .
+
+foaf:Person a owl:Class .
+
+time:TemporalEntity a owl:Class .
+
+time:Instant a owl:Class .
+
+<http://www.opengis.net/ont/sf#Point> a owl:Class ;
+    rdfs:subClassOf geo:Geometry .
+
+<http://www.spp-haefen.de/ont#Harbour> a owl:Class ;
+    rdfs:subClassOf geo:Feature .
 
