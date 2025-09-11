@@ -34547,7 +34547,7 @@ var tree={
         "parent": "http://www.opengis.net/ont/geosparql#Feature",
         "instancecount": 3450,
         "type": "geoclass",
-        "text": "Harbour (ns1:Harbour) [3450]",
+        "text": " (ns1:Harbour) [3450]",
         "data": {
           "from": {
             "http://www.w3.org/2000/01/rdf-schema#member": {
@@ -34566,6 +34566,15 @@ var tree={
             "http://purl.org/dc/elements/1.1/creator": {
               "instancecount": 3449
             },
+            "http://purl.org/dc/terms/isReferencedBy": {
+              "instancecount": 1727,
+              "http://purl.org/ontology/bibo/Article": 1197,
+              "http://purl.org/ontology/bibo/Thesis": 229,
+              "http://purl.org/ontology/bibo/Book": 280,
+              "http://purl.org/ontology/bibo/Document": 4,
+              "http://purl.org/ontology/bibo/Proceedings": 15,
+              "http://purl.org/ontology/bibo/Collection": 1
+            },
             "http://purl.org/dc/terms/partOf": {
               "instancecount": 3449,
               "http://purl.org/ontology/bibo/BookSection": 3450,
@@ -34573,8 +34582,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 3449,
-              "http://www.w3.org/ns/adms#Asset": 3450,
-              "http://rdfs.org/ns/void#Dataset": 3450
+              "http://rdfs.org/ns/void#Dataset": 3450,
+              "http://www.w3.org/ns/adms#Asset": 3450
             },
             "http://www.opengis.net/ont/geosparql#hasGeometry": {
               "instancecount": 3449,
@@ -34595,30 +34604,21 @@ var tree={
             "http://www.w3.org/2004/02/skos/core#note": {
               "instancecount": 6316
             },
-            "http://www.w3.org/2006/time#hasTime": {
-              "instancecount": 1525,
-              "http://www.w3.org/2006/time#TemporalEntity": 1526
-            },
             "http://www.wikidata.org/prop/direct/P17": {
               "instancecount": 3449
             },
             "http://www.wikidata.org/prop/direct/P206": {
               "instancecount": 3449
             },
-            "http://purl.org/dc/terms/isReferencedBy": {
-              "instancecount": 1727,
-              "http://purl.org/ontology/bibo/Article": 1197,
-              "http://purl.org/ontology/bibo/Book": 280,
-              "http://purl.org/ontology/bibo/Thesis": 229,
-              "http://purl.org/ontology/bibo/Proceedings": 15,
-              "http://purl.org/ontology/bibo/Document": 4,
-              "http://purl.org/ontology/bibo/Collection": 1
+            "http://www.spp-haefen.de/ont#precision": {
+              "instancecount": 76
+            },
+            "http://www.w3.org/2006/time#hasTime": {
+              "instancecount": 1525,
+              "http://www.w3.org/2006/time#TemporalEntity": 1526
             },
             "http://www.w3.org/2000/01/rdf-schema#comment": {
               "instancecount": 67
-            },
-            "http://www.spp-haefen.de/ont#precision": {
-              "instancecount": 76
             }
           }
         }
@@ -34965,22 +34965,22 @@ var tree={
               "instancecount": 25,
               "http://xmlns.com/foaf/0.1/Organization": 4
             },
+            "http://purl.org/ontology/bibo/volume": {
+              "instancecount": 5
+            },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 29,
-              "http://www.w3.org/ns/adms#Asset": 30,
-              "http://rdfs.org/ns/void#Dataset": 30
+              "http://rdfs.org/ns/void#Dataset": 30,
+              "http://www.w3.org/ns/adms#Asset": 30
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 29
             },
-            "http://purl.org/ontology/bibo/volume": {
-              "instancecount": 5
+            "http://purl.org/ontology/bibo/doi": {
+              "instancecount": 0
             },
             "http://purl.org/ontology/bibo/isbn": {
               "instancecount": 1
-            },
-            "http://purl.org/ontology/bibo/doi": {
-              "instancecount": 0
             }
           }
         }
@@ -36253,13 +36253,13 @@ var tree={
         "text": "Article (bibo:Article) [126]",
         "data": {
           "from": {
-            "http://purl.org/dc/terms/isReferencedBy": {
-              "instancecount": 0,
-              "http://www.spp-haefen.de/ont#Harbour": 1197
-            },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 0,
               "http://purl.org/ontology/bibo/Collection": 126
+            },
+            "http://purl.org/dc/terms/isReferencedBy": {
+              "instancecount": 0,
+              "http://www.spp-haefen.de/ont#Harbour": 1197
             }
           },
           "to": {
@@ -36282,24 +36282,24 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 125,
-              "http://www.w3.org/ns/adms#Asset": 126,
-              "http://rdfs.org/ns/void#Dataset": 126
+              "http://rdfs.org/ns/void#Dataset": 126,
+              "http://www.w3.org/ns/adms#Asset": 126
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 125
-            },
-            "http://purl.org/dc/terms/publisher": {
-              "instancecount": 42,
-              "http://xmlns.com/foaf/0.1/Organization": 27
-            },
-            "http://purl.org/ontology/bibo/number": {
-              "instancecount": 48
             },
             "http://purl.org/ontology/bibo/pageEnd": {
               "instancecount": 96
             },
             "http://purl.org/ontology/bibo/pageStart": {
               "instancecount": 96
+            },
+            "http://purl.org/ontology/bibo/number": {
+              "instancecount": 48
+            },
+            "http://purl.org/dc/terms/publisher": {
+              "instancecount": 42,
+              "http://xmlns.com/foaf/0.1/Organization": 27
             },
             "http://purl.org/ontology/bibo/doi": {
               "instancecount": 3
@@ -36539,8 +36539,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 18,
-              "http://www.w3.org/ns/adms#Asset": 19,
-              "http://rdfs.org/ns/void#Dataset": 19
+              "http://rdfs.org/ns/void#Dataset": 19,
+              "http://www.w3.org/ns/adms#Asset": 19
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 18
@@ -36592,13 +36592,13 @@ var tree={
         "text": "Document (bibo:Document) [3]",
         "data": {
           "from": {
-            "http://purl.org/dc/terms/isReferencedBy": {
-              "instancecount": 0,
-              "http://www.spp-haefen.de/ont#Harbour": 4
-            },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 0,
               "http://purl.org/ontology/bibo/Collection": 3
+            },
+            "http://purl.org/dc/terms/isReferencedBy": {
+              "instancecount": 0,
+              "http://www.spp-haefen.de/ont#Harbour": 4
             }
           },
           "to": {
@@ -36617,8 +36617,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
-              "http://www.w3.org/ns/adms#Asset": 3,
-              "http://rdfs.org/ns/void#Dataset": 3
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/adms#Asset": 3
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 2
@@ -51906,8 +51906,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 1525,
-              "http://www.w3.org/ns/adms#Asset": 1526,
-              "http://rdfs.org/ns/void#Dataset": 1526
+              "http://rdfs.org/ns/void#Dataset": 1526,
+              "http://www.w3.org/ns/adms#Asset": 1526
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1525
@@ -82420,8 +82420,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 3046,
-              "http://www.w3.org/ns/adms#Asset": 3047,
-              "http://rdfs.org/ns/void#Dataset": 3047
+              "http://rdfs.org/ns/void#Dataset": 3047,
+              "http://www.w3.org/ns/adms#Asset": 3047
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 3046
@@ -116940,7 +116940,7 @@ var tree={
         "parent": "http://www.opengis.net/ont/geosparql#Geometry",
         "instancecount": 3450,
         "type": "geoclass",
-        "text": "Point (sf:Point) [3450]",
+        "text": " (sf:Point) [3450]",
         "data": {
           "from": {
             "http://www.opengis.net/ont/geosparql#hasGeometry": {
@@ -116955,8 +116955,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 3449,
-              "http://www.w3.org/ns/adms#Asset": 3450,
-              "http://rdfs.org/ns/void#Dataset": 3450
+              "http://rdfs.org/ns/void#Dataset": 3450,
+              "http://www.w3.org/ns/adms#Asset": 3450
             },
             "http://www.opengis.net/ont/geosparql#asWKT": {
               "instancecount": 3449
@@ -118621,13 +118621,13 @@ var tree={
             "http://purl.org/dc/elements/1.1/creator": {
               "instancecount": 0,
               "http://purl.org/ontology/bibo/Article": 153,
+              "http://purl.org/ontology/bibo/Book": 37,
+              "http://purl.org/ontology/bibo/Thesis": 4,
               "http://purl.org/ontology/bibo/Proceedings": 27,
+              "http://purl.org/ontology/bibo/Collection": 1,
               "http://purl.org/ontology/bibo/BookSection": 1,
               "http://www.w3.org/ns/dcat#Dataset": 1,
-              "http://purl.org/ontology/bibo/Book": 37,
-              "http://purl.org/ontology/bibo/Collection": 1,
-              "http://purl.org/ontology/bibo/Document": 3,
-              "http://purl.org/ontology/bibo/Thesis": 4
+              "http://purl.org/ontology/bibo/Document": 3
             },
             "http://www.w3.org/2006/vcard/ns#hasMember": {
               "instancecount": 0,
@@ -118637,8 +118637,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 162,
-              "http://www.w3.org/ns/adms#Asset": 163,
-              "http://rdfs.org/ns/void#Dataset": 163
+              "http://rdfs.org/ns/void#Dataset": 163,
+              "http://www.w3.org/ns/adms#Asset": 163
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 162
@@ -118725,8 +118725,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 3,
-              "http://www.w3.org/ns/adms#Asset": 4,
-              "http://rdfs.org/ns/void#Dataset": 4
+              "http://rdfs.org/ns/void#Dataset": 4,
+              "http://www.w3.org/ns/adms#Asset": 4
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 3
@@ -118813,7 +118813,7 @@ var tree={
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "instancecount": 7,
         "type": "collectionclass",
-        "text": "Collection (bibo:Collection) [7]",
+        "text": " (bibo:Collection) [7]",
         "data": {
           "from": {
             "http://purl.org/dc/terms/isReferencedBy": {
@@ -118828,8 +118828,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 6,
-              "http://www.w3.org/ns/adms#Asset": 7,
-              "http://rdfs.org/ns/void#Dataset": 7
+              "http://rdfs.org/ns/void#Dataset": 7,
+              "http://www.w3.org/ns/adms#Asset": 7
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 6
@@ -118839,11 +118839,11 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 182,
+              "http://purl.org/ontology/bibo/Proceedings": 19,
+              "http://purl.org/ontology/bibo/Article": 126,
               "http://purl.org/ontology/bibo/BookSection": 1,
               "http://www.w3.org/ns/dcat#Dataset": 1,
               "http://purl.org/ontology/bibo/Book": 30,
-              "http://purl.org/ontology/bibo/Proceedings": 19,
-              "http://purl.org/ontology/bibo/Article": 126,
               "http://purl.org/ontology/bibo/Thesis": 4,
               "http://purl.org/ontology/bibo/Document": 3
             },
@@ -118879,8 +118879,8 @@ var tree={
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 2,
-              "http://www.w3.org/ns/adms#Asset": 3,
-              "http://rdfs.org/ns/void#Dataset": 3
+              "http://rdfs.org/ns/void#Dataset": 3,
+              "http://www.w3.org/ns/adms#Asset": 3
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 2
@@ -118890,9 +118890,9 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 4573,
+              "http://www.w3.org/2006/time#TemporalEntity": 1526,
               "http://www.w3.org/2006/time#Instant": 3047,
-              "http://purl.org/ontology/bibo/Collection": 1,
-              "http://www.w3.org/2006/time#TemporalEntity": 1526
+              "http://purl.org/ontology/bibo/Collection": 1
             }
           }
         }
@@ -119348,8 +119348,8 @@ var tree={
             },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 1
@@ -119372,25 +119372,25 @@ var tree={
         "parent": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
         "instancecount": 1,
         "type": "collectionclass",
-        "text": "FeatureCollection (gsp:FeatureCollection) [1]",
+        "text": " (gsp:FeatureCollection) [1]",
         "data": {
           "from": {
             "http://rdfs.org/ns/void#exampleResource": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://rdfs.org/ns/void#rootResource": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             }
           },
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 0
@@ -119460,14 +119460,14 @@ var tree={
         "parent": "http://www.opengis.net/ont/geosparql#SpatialObjectCollection",
         "instancecount": 1,
         "type": "collectionclass",
-        "text": "GeometryCollection (gsp:GeometryCollection) [1]",
+        "text": " (gsp:GeometryCollection) [1]",
         "data": {
           "from": {},
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 0
@@ -119497,14 +119497,14 @@ var tree={
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "instancecount": 1,
         "type": "collectionclass",
-        "text": "Group (vcard2006:Group) [1]",
+        "text": " (vcard2006:Group) [1]",
         "data": {
           "from": {},
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 0
@@ -119534,14 +119534,14 @@ var tree={
         "parent": "http://www.w3.org/2004/02/skos/core#Collection",
         "instancecount": 1,
         "type": "collectionclass",
-        "text": "Catalog (dcat:Catalog) [1]",
+        "text": " (dcat:Catalog) [1]",
         "data": {
           "from": {},
           "to": {
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 0,
-              "http://www.w3.org/ns/adms#Asset": 1,
-              "http://rdfs.org/ns/void#Dataset": 1
+              "http://rdfs.org/ns/void#Dataset": 1,
+              "http://www.w3.org/ns/adms#Asset": 1
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 0
