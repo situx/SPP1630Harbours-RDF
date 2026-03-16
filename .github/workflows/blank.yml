@@ -24,6 +24,7 @@ jobs:
         input: source/HarbourDataRepository_001_Kroeger_2018.csv
         output: docs
         mapping: spp_mapping.json
+        sepchar: ","
   
   # This workflow contains a single job called "build"  
   build:
