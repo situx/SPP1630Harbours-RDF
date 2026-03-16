@@ -6,7 +6,7 @@
   "columns": {
     "Name_mod": {"propiri": "<http://www.w3.org/2000/01/rdf-schema#label","prop": "anno","order": 1},
     "Project": {"propiri": "http://purl.org/cerif/frapo/isOutputOf","proplabels": {"en": "project"},"prop": "obj"},
-    "Place_technique": {"propiri": "<http://www.w3.org/2000/01/rdf-schema#label","proplabels": {"en": "place technique"},"prop": "obj","order": 1,
+    "Place_technique": {"propiri": "http://www.w3.org/2000/01/rdf-schema#label","proplabels": {"en": "place technique"},"prop": "obj","order": 1,
       "valuemapping": {
         "flat-bottomed vessel": "http://www.wikidata.org/entity/Q5457690",
         "keelboat": "http://www.wikidata.org/entity/Q60520969",
