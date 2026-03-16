@@ -1,8 +1,10 @@
 {
-  "datanamespace": "http://data.archaeology.link/data/spphaefen/",
-  "namespace": "http://www.spp-haefen.de/ont#",
+  "namespace": "http://data.archaeology.link/data/spphaefen/",
+  "attnamespace": "http://www.spp-haefen.de/ont#",
+  "nsprefix":"spp",
   "class": {"uri": "http://www.spp-haefen.de/ont#Harbour","labels": {"en": "harbour","de": "Hafen"}},
   "id": "ID_place",
+  "onlyschema":true,
   "columns": {
     "Name_mod": {"propiri": "http://www.w3.org/2000/01/rdf-schema#label","prop": "anno","order": 1},
     "Project": {"propiri": "http://purl.org/cerif/frapo/isOutputOf","proplabels": {"en": "project"},"prop": "obj"},
