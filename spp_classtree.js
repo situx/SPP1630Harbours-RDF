@@ -34594,27 +34594,27 @@ var tree={
             "http://www.w3.org/2004/02/skos/core#note": {
               "instancecount": 6317
             },
-            "http://www.w3.org/2006/time#hasTime": {
-              "instancecount": 1526,
-              "http://www.w3.org/2006/time#TemporalEntity": 1526
-            },
             "http://www.wikidata.org/prop/direct/P17": {
               "instancecount": 3450
             },
             "http://www.wikidata.org/prop/direct/P206": {
               "instancecount": 3450
             },
-            "http://www.spp-haefen.de/ont#precision": {
-              "instancecount": 77
-            },
             "http://purl.org/dc/terms/isReferencedBy": {
               "instancecount": 1728,
+              "http://purl.org/ontology/bibo/Thesis": 229,
               "http://purl.org/ontology/bibo/Article": 1197,
               "http://purl.org/ontology/bibo/Book": 280,
-              "http://purl.org/ontology/bibo/Thesis": 229,
-              "http://purl.org/ontology/bibo/Document": 4,
               "http://purl.org/ontology/bibo/Proceedings": 15,
+              "http://purl.org/ontology/bibo/Document": 4,
               "http://purl.org/ontology/bibo/Collection": 1
+            },
+            "http://www.w3.org/2006/time#hasTime": {
+              "instancecount": 1526,
+              "http://www.w3.org/2006/time#TemporalEntity": 1526
+            },
+            "http://www.spp-haefen.de/ont#precision": {
+              "instancecount": 77
             },
             "http://www.w3.org/2000/01/rdf-schema#comment": {
               "instancecount": 68
@@ -34958,6 +34958,10 @@ var tree={
             "http://purl.org/dc/elements/1.1/title": {
               "instancecount": 30
             },
+            "http://purl.org/dc/terms/publisher": {
+              "instancecount": 26,
+              "http://xmlns.com/foaf/0.1/Organization": 4
+            },
             "http://rdfs.org/ns/void#inDataset": {
               "instancecount": 30,
               "http://rdfs.org/ns/void#Dataset": 30,
@@ -34965,10 +34969,6 @@ var tree={
             },
             "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
               "instancecount": 30
-            },
-            "http://purl.org/dc/terms/publisher": {
-              "instancecount": 26,
-              "http://xmlns.com/foaf/0.1/Organization": 4
             },
             "http://purl.org/ontology/bibo/volume": {
               "instancecount": 6
@@ -36268,6 +36268,18 @@ var tree={
             "http://purl.org/dc/elements/1.1/title": {
               "instancecount": 126
             },
+            "http://rdfs.org/ns/void#inDataset": {
+              "instancecount": 126,
+              "http://rdfs.org/ns/void#Dataset": 126,
+              "http://www.w3.org/ns/adms#Asset": 126
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
+              "instancecount": 126
+            },
+            "http://purl.org/dc/terms/publisher": {
+              "instancecount": 43,
+              "http://xmlns.com/foaf/0.1/Organization": 27
+            },
             "http://purl.org/ontology/bibo/issuer": {
               "instancecount": 108,
               "http://purl.org/ontology/bibo/Journal": 53
@@ -36278,26 +36290,14 @@ var tree={
             "http://purl.org/ontology/bibo/pageStart": {
               "instancecount": 97
             },
-            "http://rdfs.org/ns/void#inDataset": {
-              "instancecount": 126,
-              "http://rdfs.org/ns/void#Dataset": 126,
-              "http://www.w3.org/ns/adms#Asset": 126
-            },
-            "http://www.w3.org/1999/02/22-rdf-syntax-ns#type": {
-              "instancecount": 126
-            },
-            "http://purl.org/ontology/bibo/number": {
-              "instancecount": 49
-            },
             "http://purl.org/ontology/bibo/volume": {
               "instancecount": 78
             },
-            "http://purl.org/dc/terms/publisher": {
-              "instancecount": 43,
-              "http://xmlns.com/foaf/0.1/Organization": 27
-            },
             "http://purl.org/ontology/bibo/doi": {
               "instancecount": 4
+            },
+            "http://purl.org/ontology/bibo/number": {
+              "instancecount": 49
             },
             "http://purl.org/ontology/bibo/isbn": {
               "instancecount": 1
@@ -36506,11 +36506,11 @@ var tree={
         "text": "Proceedings (bibo:Proceedings) [19]",
         "data": {
           "from": {
-            "http://www.w3.org/2000/01/rdf-schema#member": {
-              "http://purl.org/ontology/bibo/Collection": 19
-            },
             "http://purl.org/dc/terms/isReferencedBy": {
               "http://www.spp-haefen.de/ont#Harbour": 15
+            },
+            "http://www.w3.org/2000/01/rdf-schema#member": {
+              "http://purl.org/ontology/bibo/Collection": 19
             }
           },
           "to": {
@@ -118606,11 +118606,11 @@ var tree={
               "http://purl.org/ontology/bibo/Article": 153,
               "http://purl.org/ontology/bibo/Book": 37,
               "http://purl.org/ontology/bibo/Proceedings": 27,
-              "http://purl.org/ontology/bibo/Thesis": 4,
-              "http://purl.org/ontology/bibo/Collection": 1,
               "http://purl.org/ontology/bibo/Document": 3,
               "http://purl.org/ontology/bibo/BookSection": 1,
-              "http://www.w3.org/ns/dcat#Dataset": 1
+              "http://www.w3.org/ns/dcat#Dataset": 1,
+              "http://purl.org/ontology/bibo/Thesis": 4,
+              "http://purl.org/ontology/bibo/Collection": 1
             },
             "http://www.w3.org/2006/vcard/ns#hasMember": {
               "http://www.w3.org/2006/vcard/ns#Group": 163
@@ -118817,13 +118817,13 @@ var tree={
             },
             "http://www.w3.org/2000/01/rdf-schema#member": {
               "instancecount": 183,
-              "http://purl.org/ontology/bibo/Book": 30,
-              "http://purl.org/ontology/bibo/Article": 126,
-              "http://purl.org/ontology/bibo/Thesis": 4,
               "http://purl.org/ontology/bibo/Document": 3,
+              "http://purl.org/ontology/bibo/Book": 30,
+              "http://purl.org/ontology/bibo/Thesis": 4,
+              "http://purl.org/ontology/bibo/Proceedings": 19,
+              "http://purl.org/ontology/bibo/Article": 126,
               "http://purl.org/ontology/bibo/BookSection": 1,
-              "http://www.w3.org/ns/dcat#Dataset": 1,
-              "http://purl.org/ontology/bibo/Proceedings": 19
+              "http://www.w3.org/ns/dcat#Dataset": 1
             },
             "http://purl.org/dc/elements/1.1/created": {
               "instancecount": 1
