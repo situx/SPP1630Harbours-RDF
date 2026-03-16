@@ -23,6 +23,7 @@ jobs:
     with: 
         input: source/HarbourDataRepository_001_Kroeger_2018.csv
         output: docs
+        ghpages: true
         mapping: spp_mapping.json
         sepchar: ","
   
