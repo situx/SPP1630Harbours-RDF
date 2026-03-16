@@ -1,11 +1,20 @@
 {
     "datanamespace":"http://data.archaeology.link/data/spphaefen/",
+    "namespace":"http://www.spp-haefen.de/ont#",
     "id":"ID_place",
     "columns":{
-        "Name_mod": {"propiri":"<http://www.w3.org/2000/01/rdf-schema#label","proplabels":{"en":"country","de":"Land"},"prop":"anno", "order": 1},
-
+        "Name_mod": {"propiri":"<http://www.w3.org/2000/01/rdf-schema#label","prop":"anno", "order": 1},
+        "Project":{"propiri":"http://purl.org/cerif/frapo/isOutputOf","proplabels":{"en":"project"},"prop":"obj"},
+        "Place_technique": {"propiri":"<http://www.w3.org/2000/01/rdf-schema#label","proplabels":{"en":"place technique"},"prop":"obj", "order": 1,
+            "valuemapping":{
+                "logboat":"http://www.wikidata.org/entity/Q596073",
+                "keelboat":"http://www.wikidata.org/entity/Q60520969",
+                "flat-bottomed vessel":"http://www.wikidata.org/entity/Q5457690",
+                "raft":"http://www.wikidata.org/entity/Q200433"
+            }
+        },
         "Date_min": {"propiri":"http://www.w3.org/2006/time#inXSDgYear","proplabels":{"en":"country","de":"Land"},"prop":"data", "order": 1, "range":"http://www.w3.org/2001/XMLSchema#gYear"},
-        "Hydro_name_mod": {"propiri":"http://www.w3.org/2006/time#inXSDgYear","proplabels":{"en":"country","de":"Land"},"prop":"data", "order": 1, 
+        "Hydro_name_mod": {"propiri":"http://www.w3.org/2006/time#inXSDgYear","proplabels":{"en":"hydrographic name"},"prop":"obj", "order": 1, 
         "valuemapping":{
             "Loch Leven":"http://www.wikidata.org/entity/Q2266807",
             "Lough Fingrean":"http://www.wikidata.org/entity/Q24643256",
@@ -313,7 +322,7 @@
             "Kummerower See":"http://www.wikidata.org/entity/Q688154",
             "Uchter Moor":"http://www.wikidata.org/entity/Q1549190",
             "Glambecksee":"http://www.wikidata.org/entity/Q32033070",
-            "Windebyer Noor":"http://www.wikidata.org/entity/Q896807",,
+            "Windebyer Noor":"http://www.wikidata.org/entity/Q896807",
             "River Slaney":"http://www.wikidata.org/entity/Q1122203",
             "Lough Scur":"http://www.wikidata.org/entity/Q24196364",
             "River Feale":"http://www.wikidata.org/entity/Q1413986",
@@ -491,7 +500,7 @@
             "Ukraine":"http://www.wikidata.org/entity/Q212",
             "Switzerland":"http://www.wikidata.org/entity/Q39"
          }
-        },        
+        }       
 
     }
 }
