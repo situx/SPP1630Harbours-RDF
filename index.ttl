@@ -11,8 +11,8 @@
 @prefix ns1: <http://www.spp-haefen.de/ont#> .
 @prefix ns2: <http://www.wikidata.org/prop/direct/> .
 @prefix ns3: <http://purl.org/cerif/frapo/> .
-@prefix ns4: <http://purl.org/ontology/bibo/> .
-@prefix ns5: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns4: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns5: <http://purl.org/ontology/bibo/> .
 @prefix ns6: <http://ldf.fi/void-ext#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -34,7 +34,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://data.archaeology.link/data/spphaefen/Article_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/Article_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -167,7 +167,7 @@
         <http://data.archaeology.link/data/spphaefen/bib_vonBerg_2012_Goldring>,
         <http://data.archaeology.link/data/spphaefen/bib_vonBerg_2013_Stadtkerngrabung> .
 
-<http://data.archaeology.link/data/spphaefen/BookSection_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/BookSection_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -175,7 +175,7 @@
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
     rdfs:member <http://data.archaeology.link/data/spphaefen/bib_dbt_mods_00035241> .
 
-<http://data.archaeology.link/data/spphaefen/Book_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/Book_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -228,7 +228,7 @@
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
     dcat:dataset <http://data.archaeology.link/data/spphaefen/bib_dbt_mods_00035241> .
 
-<http://data.archaeology.link/data/spphaefen/Document_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/Document_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -3292,13 +3292,13 @@
         <http://data.archaeology.link/data/spphaefen/9_foundation_beginning>,
         <http://data.archaeology.link/data/spphaefen/9_foundation_end> .
 
-<http://data.archaeology.link/data/spphaefen/Person_collection> a ns5:Group,
+<http://data.archaeology.link/data/spphaefen/Person_collection> a ns4:Group,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Person Instances Collection"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
-    ns5:hasMember <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS>,
+    ns4:hasMember <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS>,
         <http://data.archaeology.link/data/spphaefen/author_Ammann_Brigitta>,
         <http://data.archaeology.link/data/spphaefen/author_Amstutz_Marco>,
         <http://data.archaeology.link/data/spphaefen/author_Andersen_Soren_H>,
@@ -6919,7 +6919,7 @@
         <http://data.archaeology.link/data/spphaefen/99_geom>,
         <http://data.archaeology.link/data/spphaefen/9_geom> .
 
-<http://data.archaeology.link/data/spphaefen/Proceedings_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/Proceedings_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -8478,7 +8478,7 @@
         <http://data.archaeology.link/data/spphaefen/99_foundation>,
         <http://data.archaeology.link/data/spphaefen/9_foundation> .
 
-<http://data.archaeology.link/data/spphaefen/Thesis_collection> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/Thesis_collection> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -8505,7 +8505,7 @@
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Linkset: spp_dataset - Bibliography Ontology (bibo:)"@en ;
     void:linkPredicate rdf:type ;
-    void:objectsTarget ns4: ;
+    void:objectsTarget ns5: ;
     void:subjectsTarget <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
     void:triples 190 .
 
@@ -8567,7 +8567,7 @@
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Linkset: spp_dataset - Vcard Vocabulary (vcard2006:)"@en ;
     void:linkPredicate rdf:type ;
-    void:objectsTarget ns5: ;
+    void:objectsTarget ns4: ;
     void:subjectsTarget <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
     void:triples 1 .
 
@@ -8588,7 +8588,7 @@
     rdfs:label "Linkset: spp_dataset - Wikidata Entities (wde:)"@en,
         "Linkset: spp_dataset - entity"@en ;
     void:linkPredicate dcterms:publisher,
-        ns4:issuer,
+        ns5:issuer,
         ns1:place_technique,
         ns2:P17,
         ns2:P206 ;
@@ -73529,7 +73529,7 @@
     ns2:P17 <http://www.wikidata.org/entity/Q142> ;
     ns2:P206 <http://www.wikidata.org/entity/Q18564755> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ammann_1977_neolithischen> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Ammann_1977_neolithischen> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73540,10 +73540,10 @@
         <http://data.archaeology.link/data/spphaefen/author_Liese-Kleiber_Helga> ;
     dc:title "Die neolithischen Ufersiedlungen von Twann. Band 3: Der bronzezeitliche Einbaum und die nachneolithischen Sedimente"@en ;
     dcterms:publisher "Staatlicher Lehrmittelverlag Bern 1977" ;
-    ns4:volume "3"^^xsd:string ;
+    ns5:volume "3"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1992_Batellerie> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1992_Batellerie> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73552,7 +73552,7 @@
     dc:title "Batellerie gallo-romaine sur le lac de Neuchâtel"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1992_Batellerie2> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1992_Batellerie2> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73561,7 +73561,7 @@
     dc:title "Batellerie gallo-romaine sur le lac de Neuchâtel"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bartoli_2012_Creating> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Bartoli_2012_Creating> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73572,17 +73572,17 @@
     dc:title "Creating a GIS for the Underwater Research Project ANAXUM: the Stella 1 Shipwreck"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2000_26> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2000_26> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> ;
     dc:title "26. A Roman River Barge (?) Found in the Danube near Prahovo, Serbia"@en ;
-    ns4:issuer "BOATS, SHIPS AND SHIPYARDS" ;
+    ns5:issuer "BOATS, SHIPS AND SHIPYARDS" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2002_Romerzeitlichen> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2002_Romerzeitlichen> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73590,21 +73590,21 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> ;
     dc:title "Die römerzeitlichen Schiffsfunde von Oberstimm in Bayern"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q108267756> ;
-    ns4:volume "50"^^xsd:string ;
+    ns5:volume "50"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2002_Wrack> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2002_Wrack> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2002"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> ;
     dc:title "Das Wrack von Vechten"@en ;
-    ns4:issuer "Römerzeitliche Schiffsfunde in der Datenbank ‘Navis i’, Kataloge Vor-und Frühgeschichtlicher Altertümer" ;
-    ns4:volume "29"^^xsd:string ;
+    ns5:issuer "Römerzeitliche Schiffsfunde in der Datenbank ‘Navis i’, Kataloge Vor-und Frühgeschichtlicher Altertümer" ;
+    ns5:volume "29"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Brindley_1991_Boat> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Brindley_1991_Boat> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73613,14 +73613,14 @@
         <http://data.archaeology.link/data/spphaefen/author_Lanting_Jan_N> ;
     dc:title "A boat of the Mediterranean tradition in Ireland: Preliminary note"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 70 ;
-    ns4:pageStart 69 ;
-    ns4:volume "20"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 70 ;
+    ns5:pageStart 69 ;
+    ns5:volume "20"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Brinker_2010_Taucharchaologische> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Brinker_2010_Taucharchaologische> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73629,13 +73629,13 @@
         <http://data.archaeology.link/data/spphaefen/author_Krüger_Joachim>,
         <http://data.archaeology.link/data/spphaefen/author_Lübke_Harald> ;
     dc:title "Taucharchäologische Untersuchungen zur Frage der Herkunft der bronzezeitlichen Menschenfunde im Tollensetal bei Weltzin, Mecklenburg-Vorpommern--ein Vorbericht"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:pageEnd 47 ;
-    ns4:pageStart 41 ;
-    ns4:volume "16"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:pageEnd 47 ;
+    ns5:pageStart 41 ;
+    ns5:volume "16"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Brouwers_2013_Romeinse> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Brouwers_2013_Romeinse> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73644,14 +73644,14 @@
         <http://data.archaeology.link/data/spphaefen/author_Jansma_E>,
         <http://data.archaeology.link/data/spphaefen/author_ers_M> ;
     dc:title "Romeinse scheepsresten in Nederland"@en ;
-    ns4:issuer "ARCHEObrief" ;
-    ns4:number 4 ;
-    ns4:pageEnd 27 ;
-    ns4:pageStart 13 ;
-    ns4:volume "17"^^xsd:string ;
+    ns5:issuer "ARCHEObrief" ;
+    ns5:number 4 ;
+    ns5:pageEnd 27 ;
+    ns5:pageStart 13 ;
+    ns5:volume "17"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Brouwers_2015_Middeleeuwse> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Brouwers_2015_Middeleeuwse> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73662,7 +73662,7 @@
     dc:title "Middeleeuwse scheepsresten in Nederland: De vroege middeleeuwen 500-1050"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Böcking_1996_Caudicaria> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Böcking_1996_Caudicaria> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73670,14 +73670,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Böcking_Werner> ;
     dc:title "Caudicaria—Römische Lastkähne: Neue Schiffsfunde im Xantener Raum"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q1420342> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q576061> ;
-    ns4:number 3 ;
-    ns4:pageEnd 215 ;
-    ns4:pageStart 209 ;
-    ns4:volume "27"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q576061> ;
+    ns5:number 3 ;
+    ns5:pageEnd 215 ;
+    ns5:pageStart 209 ;
+    ns5:volume "27"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Crumlin_1997_Viking> a ns4:Document,
+<http://data.archaeology.link/data/spphaefen/bib_Crumlin_1997_Viking> a ns5:Document,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73687,7 +73687,7 @@
     dcterms:publisher "Schleswig and Roskilde" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_De_1978_Ships> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_De_1978_Ships> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73696,7 +73696,7 @@
     dc:title "Ships of the Roman period at Zwammerdam"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Delpino_1995_Piroga> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Delpino_1995_Piroga> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73704,25 +73704,25 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Delpino_MA_Fugazzola>,
         <http://data.archaeology.link/data/spphaefen/author_Mineo_M> ;
     dc:title "La piroga neolitica del lago di Bracciano (“La Marmotta 1”)"@en ;
-    ns4:issuer "Bullettino di paletnologia italiana" ;
-    ns4:pageEnd 266 ;
-    ns4:pageStart 197 ;
-    ns4:volume "86"^^xsd:string ;
+    ns5:issuer "Bullettino di paletnologia italiana" ;
+    ns5:pageEnd 266 ;
+    ns5:pageStart 197 ;
+    ns5:volume "86"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Devals_2005_Brivet> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Devals_2005_Brivet> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2005"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Devals_Christophe> ;
     dc:title "Le Brivet, archéologie d'une rivière en Haute-Bretagne (France). Vers la reconnaissance d'un grand site du Moyen Age?"@en ;
-    ns4:number 126 ;
-    ns4:pageEnd 88 ;
-    ns4:pageStart 75 ;
+    ns5:number 126 ;
+    ns5:pageEnd 88 ;
+    ns5:pageStart 75 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1978_Fischereinbaum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1978_Fischereinbaum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73730,25 +73730,25 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ellmers_Detlev> ;
     dc:title "Fischereinbaum von Borken, Westfalen"@en ;
     dcterms:publisher "DEU" ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715836> ;
-    ns4:pageEnd 164 ;
-    ns4:pageStart 159 ;
-    ns4:volume "2"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715836> ;
+    ns5:pageEnd 164 ;
+    ns5:pageStart 159 ;
+    ns5:volume "2"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1978_Nachen> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1978_Nachen> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1978"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ellmers_Detlev> ;
     dc:title "Ein Nachen mit Streichruder aus der Lippe bei Hünxe"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q892739> ;
-    ns4:pageEnd 51 ;
-    ns4:pageStart 43 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q892739> ;
+    ns5:pageEnd 51 ;
+    ns5:pageStart 43 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Fermin_2015_Zutphense> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Fermin_2015_Zutphense> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73759,18 +73759,18 @@
     dcterms:publisher "Gemeente Zutphen" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Filmer_1988_New> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Filmer_1988_New> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1988"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Filmer-Sankey_William> ;
     dc:title "A new boat burial from the Snape Anglo-Saxon cemetery, Suffolk"@en ;
-    ns4:pageEnd 134 ;
-    ns4:pageStart 126 ;
+    ns5:pageEnd 134 ;
+    ns5:pageStart 126 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gaspari_2016_46> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Gaspari_2016_46> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73781,7 +73781,7 @@
     dc:title "46 Roman river barge from Sisak (Siscia), Croatia"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Haalebos_1997_Romisches> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Haalebos_1997_Romisches> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73790,7 +73790,7 @@
     dc:title "Ein römisches Getreideschiff in Woerden (NL)"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hafner_2012_Moosseedorf> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hafner_2012_Moosseedorf> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73801,13 +73801,13 @@
         <http://data.archaeology.link/data/spphaefen/author_Harb_P>,
         <http://data.archaeology.link/data/spphaefen/author_Moll-Dau_Friederike> ;
     dc:title "Moosseedorf, Moossee Oststation, Strandbad"@en ;
-    ns4:issuer "Strandbadneubau, Pfahlbauten und das älteste Boot der Schweiz. Archäologie Bern/Archéologie bernoise" ;
-    ns4:pageEnd 77 ;
-    ns4:pageStart 71 ;
-    ns4:volume "2012"^^xsd:string ;
+    ns5:issuer "Strandbadneubau, Pfahlbauten und das älteste Boot der Schweiz. Archäologie Bern/Archéologie bernoise" ;
+    ns5:pageEnd 77 ;
+    ns5:pageStart 71 ;
+    ns5:volume "2012"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Huiskes_1980_Andernach> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Huiskes_1980_Andernach> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73815,10 +73815,10 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Huiskes_Manfred> ;
     dc:title "Andernach im Mittelalter: von den Anfängen bis zum Ende des 14. Jahrhunderts"@en ;
     dcterms:publisher "L. Röhrscheid" ;
-    ns4:isbn "9783792804414"^^xsd:string ;
+    ns5:isbn "9783792804414"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hunold_2011_Erbe> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Hunold_2011_Erbe> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73826,10 +73826,10 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hunold_Angelika> ;
     dc:title "Das Erbe des Vulkans: eine Reise in die Erd- und Technikgeschichte zwischen Eifel und Rhein"@en ;
     dcterms:publisher "Schnell + Steiner" ;
-    ns4:isbn "9783795424398"^^xsd:string ;
+    ns5:isbn "9783795424398"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Kennecke_2016_Rhein> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Kennecke_2016_Rhein> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73841,20 +73841,20 @@
     dcterms:publisher "Vor-und Frühgeschichtliche Archäologie, Rheinische Friedrich-Wilhelms~…" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lehner_1901_Antunnacum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Lehner_1901_Antunnacum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1901"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Lehner_Hans> ;
     dc:title "Antunnacum"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q892739> ;
-    ns4:pageEnd 36 ;
-    ns4:pageStart 1 ;
-    ns4:volume "107"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q892739> ;
+    ns5:pageEnd 36 ;
+    ns5:pageStart 1 ;
+    ns5:volume "107"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lommerzheim_2004_Rheinzeiten> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Lommerzheim_2004_Rheinzeiten> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73865,20 +73865,20 @@
     dcterms:publisher "Inst. für Denkmalschutz und Denkmalpflege" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lübke_2004_Erganzende> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Lübke_2004_Erganzende> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2004"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Lübke_Harald> ;
     dc:title "Ergänzende Anmerkungen zur Datierung der Einbäume des endmesolithisch/frühneolithischen Fundplatzes Stralsund-Mischwasserspeicher"@en ;
-    ns4:issuer <https://www.wikidata.org/entity/Q89109472> ;
-    ns4:pageEnd 62 ;
-    ns4:pageStart 257 ;
-    ns4:volume "52"^^xsd:string ;
+    ns5:issuer <https://www.wikidata.org/entity/Q89109472> ;
+    ns5:pageEnd 62 ;
+    ns5:pageStart 257 ;
+    ns5:volume "52"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mangartz_2008_Romischer> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mangartz_2008_Romischer> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73886,10 +73886,10 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Mangartz_Fritz> ;
     dc:title "Römischer Basaltlava-Abbau zwischen Eifel und Rhein: Monographien des Römisch-Germanischen Zentralmuseums"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q878029> ;
-    ns4:isbn "9783884671153"^^xsd:string ;
+    ns5:isbn "9783884671153"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Massimo_2017_Precenicco> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Massimo_2017_Precenicco> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73899,29 +73899,29 @@
     dcterms:publisher <https://www.wikidata.org/entity/Q4845346> ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1978_Logboats> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1978_Logboats> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1978"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_McGrail_Sean> ;
     dc:title "Logboats of England and Wales, National Maritime Museum, Greenwich, Arch. Ser. 2"@en ;
-    ns4:issuer <https://www.wikidata.org/entity/Q97623887> ;
-    ns4:volume "51"^^xsd:string ;
+    ns5:issuer <https://www.wikidata.org/entity/Q97623887> ;
+    ns5:volume "51"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1985_Brigg> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1985_Brigg> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1985"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_McGrail_Sean> ;
     dc:title "The Brigg' Raft': problems in reconstruction and in the assessment of performance"@en ;
-    ns4:pageEnd 194 ;
-    ns4:pageStart 165 ;
+    ns5:pageEnd 194 ;
+    ns5:pageStart 165 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1990_Theoretical> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1990_Theoretical> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73929,14 +73929,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_McGrail_Sean> ;
     dc:title "The theoretical performance of a hypothetical reconstruction of the Clapton logboat"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 2 ;
-    ns4:pageEnd 133 ;
-    ns4:pageStart 129 ;
-    ns4:volume "19"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 2 ;
+    ns5:pageEnd 133 ;
+    ns5:pageStart 129 ;
+    ns5:volume "19"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1994_Brigg> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_1994_Brigg> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73944,14 +73944,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_McGrail_Sean> ;
     dc:title "The Brigg ‘raft’: a flat-bottomed boat"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 4 ;
-    ns4:pageEnd 288 ;
-    ns4:pageStart 283 ;
-    ns4:volume "23"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 4 ;
+    ns5:pageEnd 288 ;
+    ns5:pageStart 283 ;
+    ns5:volume "23"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_2014_Late> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mcgrail_2014_Late> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -73959,50 +73959,50 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Mcgrail_Seán> ;
     dc:title "The Late Bronze Age Brigg ‘Raft’Displayed"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 179 ;
-    ns4:pageStart 174 ;
-    ns4:volume "43"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 179 ;
+    ns5:pageStart 174 ;
+    ns5:volume "43"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mirschenz_2016_dfg> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mirschenz_2016_dfg> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2016"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Mirschenz_Manuela> ;
     dc:title "Das DFG-Projekt „Der Rhein als europäische Verkehrsachse “"@en ;
-    ns4:doi "10.11588/air.2016.0.77235"^^xsd:string ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636527> ;
-    ns4:pageEnd 114 ;
-    ns4:pageStart 112 ;
+    ns5:doi "10.11588/air.2016.0.77235"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636527> ;
+    ns5:pageEnd 114 ;
+    ns5:pageStart 112 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Moortel_2003_Van> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Moortel_2003_Van> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2003"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Moortel_A> ;
     dc:title "A new look at the Utrecht ship’"@en ;
-    ns4:number 9 ;
-    ns4:volume "183"^^xsd:string ;
+    ns5:number 9 ;
+    ns5:volume "183"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Obladen_1993_Karolingischer> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Obladen_1993_Karolingischer> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1993"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Obladen-Kauder_Julia> ;
     dc:title "Ein karolingischer Flußkahn aus Kalkar-Niedermörmter (The Carolingian scow of Kalkar-Niedermörmter)"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636527> ;
-    ns4:pageEnd 99 ;
-    ns4:pageStart 98 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636527> ;
+    ns5:pageEnd 99 ;
+    ns5:pageStart 98 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Owain_1992_The> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Owain_1992_The> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74010,15 +74010,15 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Owain_T._P._Roberts> ;
     dc:title "The Brigg ‘raft’ reassessed as a round bilge Bronze Age boat"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q1508259> ;
-    ns4:doi "10.1111/j.1095-9270.1992.tb00370.x"^^xsd:string ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 3 ;
-    ns4:pageEnd 258 ;
-    ns4:pageStart 245 ;
-    ns4:volume "21"^^xsd:string ;
+    ns5:doi "10.1111/j.1095-9270.1992.tb00370.x"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 3 ;
+    ns5:pageEnd 258 ;
+    ns5:pageStart 245 ;
+    ns5:volume "21"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pezzo_2011_Datazione> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Pezzo_2011_Datazione> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74031,13 +74031,13 @@
         <http://data.archaeology.link/data/spphaefen/author_Stefano_Marconi>,
         <http://data.archaeology.link/data/spphaefen/author_Stefano_Medas> ;
     dc:title "Datazione assoluta della piroga monossile di Ponte di Piave (TV). Analisi dendrocronologiche e radiocarboniche"@en ;
-    ns4:issuer "ANNALI DEL MUSEO CIVICO DI ROVERETO. SEZIONE: ARCHEOLOGIA, STORIA, SCIENZE NATURALI" ;
-    ns4:pageEnd 101 ;
-    ns4:pageStart 91 ;
-    ns4:volume "25"^^xsd:string ;
+    ns5:issuer "ANNALI DEL MUSEO CIVICO DI ROVERETO. SEZIONE: ARCHEOLOGIA, STORIA, SCIENZE NATURALI" ;
+    ns5:pageEnd 101 ;
+    ns5:pageStart 91 ;
+    ns5:volume "25"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Plumier_2009_Archeologie> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Plumier_2009_Archeologie> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74046,13 +74046,13 @@
         <http://data.archaeology.link/data/spphaefen/author_Corbiau_Marie-Hélène>,
         <http://data.archaeology.link/data/spphaefen/author_Plumier_Jean> ;
     dc:title "L’archéologie fluviale en Wallonie (Belgique)"@en ;
-    ns4:issuer "Les Dossiers d'arch{'e}ologie (Dijon)" ;
-    ns4:number 331 ;
-    ns4:pageEnd 31 ;
-    ns4:pageStart 26 ;
+    ns5:issuer "Les Dossiers d'arch{'e}ologie (Dijon)" ;
+    ns5:number 331 ;
+    ns5:pageEnd 31 ;
+    ns5:pageStart 26 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rebourg_1994_Carte> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Rebourg_1994_Carte> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74062,7 +74062,7 @@
     dcterms:publisher "Éditions de la Maison des sciences de l'homme, Paris" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Roder_1961_neue> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Roder_1961_neue> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74070,14 +74070,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Röder_Josef> ;
     dc:title "Neue Ausgrabungen in Andernach"@en ;
     dcterms:publisher "Deutsches Archäologisches Institut" ;
-    ns4:issuer "Germania: Anzeiger der Römisch-Germanischen Kommission des Deutschen Archäologischen Instituts" ;
-    ns4:number 1 ;
-    ns4:pageEnd 213 ;
-    ns4:pageStart 208 ;
-    ns4:volume "39"^^xsd:string ;
+    ns5:issuer "Germania: Anzeiger der Römisch-Germanischen Kommission des Deutschen Archäologischen Instituts" ;
+    ns5:number 1 ;
+    ns5:pageEnd 213 ;
+    ns5:pageStart 208 ;
+    ns5:volume "39"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ruger_1979_Siegesdenkmal> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ruger_1979_Siegesdenkmal> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74086,38 +74086,38 @@
         <http://data.archaeology.link/data/spphaefen/author_Rüger_Christoph_B>,
         <http://data.archaeology.link/data/spphaefen/author_Wegner_H-H> ;
     dc:title "Ein Siegesdenkmal der legio VI victrix"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q892739> ;
-    ns4:pageEnd 200 ;
-    ns4:pageStart 187 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q892739> ;
+    ns5:pageEnd 200 ;
+    ns5:pageStart 187 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Schaefer_2000_Andernach> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Schaefer_2000_Andernach> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Schäfer_Klaus> ;
     dc:title "Andernach--Drehscheibe des antiken Steinhandels"@en ;
-    ns4:issuer "Steinbruch und Bergwerk. Denkmäler römischer Technikgeschichte zwischen Eifel und Rhein. Kataloghandbuch zu den Ausstellungen in den Museen von mayen und Andernach (Bockius, R., Bosinski, G., Hörter, F., Hunold, A., Mangartz, F., Oesterwind, BC, Schaaff. H., Schäfer, K.), Vulkanpark-Forschungen" ;
-    ns4:pageEnd 109 ;
-    ns4:pageStart 83 ;
-    ns4:volume "2"^^xsd:string ;
+    ns5:issuer "Steinbruch und Bergwerk. Denkmäler römischer Technikgeschichte zwischen Eifel und Rhein. Kataloghandbuch zu den Ausstellungen in den Museen von mayen und Andernach (Bockius, R., Bosinski, G., Hörter, F., Hunold, A., Mangartz, F., Oesterwind, BC, Schaaff. H., Schäfer, K.), Vulkanpark-Forschungen" ;
+    ns5:pageEnd 109 ;
+    ns5:pageStart 83 ;
+    ns5:volume "2"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Schaefer_2001_basaltlava> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Schaefer_2001_basaltlava> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2001"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Schäfer_Klaus> ;
     dc:title "Basaltlava und Tuff-Exportschlager in römischer Zeit"@en ;
-    ns4:issuer "Basaltlava und Tuff-Exportschlager in römischer Zeit" ;
-    ns4:number 53 ;
-    ns4:pageEnd 27 ;
-    ns4:pageStart 6 ;
+    ns5:issuer "Basaltlava und Tuff-Exportschlager in römischer Zeit" ;
+    ns5:number 53 ;
+    ns5:pageEnd 27 ;
+    ns5:pageStart 6 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Tran_1997_Treatment> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Tran_1997_Treatment> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74126,11 +74126,11 @@
         <http://data.archaeology.link/data/spphaefen/author_Hiron_X>,
         <http://data.archaeology.link/data/spphaefen/author_Tran_Quoc_Khoi> ;
     dc:title "Treatment of Neolithic dugout canoe from Paris-Bercy: controlled drying after PEG impregnation and attempt at modelling of the drying process"@en ;
-    ns4:pageEnd 580 ;
-    ns4:pageStart 567 ;
+    ns5:pageEnd 580 ;
+    ns5:pageStart 567 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vermeersch_2011_Boomstamboot> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Vermeersch_2011_Boomstamboot> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74140,7 +74140,7 @@
     dcterms:publisher "Rijksdienst voor Archeologie, Cultuurlandschap en Monumenten" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vos_2011_Woerden> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Vos_2011_Woerden> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74150,39 +74150,39 @@
         <http://data.archaeology.link/data/spphaefen/author_Vos_Wouter_K> ;
     dc:title "The Woerden 7: an oar-powered Roman barge built in The Netherlands: details on the excavation at the Nieuwe Markt in Woerden (Hoochwoert)"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q878029> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636851> ;
-    ns4:number 1 ;
-    ns4:pageEnd 118 ;
-    ns4:pageStart 101 ;
-    ns4:volume "41"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636851> ;
+    ns5:number 1 ;
+    ns5:pageEnd 118 ;
+    ns5:pageStart 101 ;
+    ns5:volume "41"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Weerd_1985_Landlubber> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Weerd_1985_Landlubber> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1985"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_de_Weerd_Maarten_Derk> ;
     dc:title "A landlubber's view of shipbuilding procedure in the Celtic barges of Zwammerdam, the Netherlands"@en ;
-    ns4:pageEnd 51 ;
-    ns4:pageStart 35 ;
+    ns5:pageEnd 51 ;
+    ns5:pageStart 35 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_hirte_1989_Quarum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_hirte_1989_Quarum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1989"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hirte_Christian> ;
     dc:title "„… quarum quaedam et triginta homines ferunt “"@en ;
-    ns4:issuer "Bemerkungen zu Befund und Funktion der kaiserzeitlichen Stammboote von Vaale und Leck. Offa" ;
-    ns4:number 1989 ;
-    ns4:pageEnd 136 ;
-    ns4:pageStart 111 ;
-    ns4:volume "46"^^xsd:string ;
+    ns5:issuer "Bemerkungen zu Befund und Funktion der kaiserzeitlichen Stammboote von Vaale und Leck. Offa" ;
+    ns5:number 1989 ;
+    ns5:pageEnd 136 ;
+    ns5:pageStart 111 ;
+    ns5:volume "46"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_vanHolk_2016_48> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_vanHolk_2016_48> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74191,7 +74191,7 @@
     dc:title "48 A Roman barge with an artefactual inventory from De Meern (the Netherlands)"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2009_Mann> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2009_Mann> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74199,13 +74199,13 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_von_Berg_Axel> ;
     dc:title "Mann mit Helm"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q1420342> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636535> ;
-    ns4:number 6 ;
-    ns4:pageEnd 55 ;
-    ns4:pageStart 54 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636535> ;
+    ns5:number 6 ;
+    ns5:pageEnd 55 ;
+    ns5:pageStart 54 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2012_Goldring> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2012_Goldring> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -74213,24 +74213,24 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_von_Berg_Axel> ;
     dc:title "Goldring im Keller"@en ;
     dcterms:publisher "Wissenschaftliche Buchgesellschaft (WBG)" ;
-    ns4:doi "10.2307/26320083"^^xsd:string ;
-    ns4:issn "01768522"^^xsd:string ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636535> ;
-    ns4:number 2 ;
-    ns4:pageEnd 53 ;
-    ns4:pageStart 53 ;
+    ns5:doi "10.2307/26320083"^^xsd:string ;
+    ns5:issn "01768522"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636535> ;
+    ns5:number 2 ;
+    ns5:pageEnd 53 ;
+    ns5:pageStart 53 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2013_Stadtkerngrabung> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_vonBerg_2013_Stadtkerngrabung> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2013"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_von_Berg_Axel> ;
     dc:title "Stadtkerngrabung im römischen Andernach auf dem Weissheimer Gelände der ehemaligen Malzfabrik"@en ;
-    ns4:issuer "Andernacher Annalen, 10 (2013/14)" ;
-    ns4:pageEnd 22 ;
-    ns4:pageStart 7 ;
+    ns5:issuer "Andernacher Annalen, 10 (2013/14)" ;
+    ns5:pageEnd 22 ;
+    ns5:pageStart 7 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_P17> a void:Dataset,
@@ -74294,7 +74294,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: doi"@en ;
-    void:property ns4:doi ;
+    void:property ns5:doi ;
     void:triples 6 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_family_Name> a void:Dataset,
@@ -74342,7 +74342,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: hasMember"@en ;
-    void:property ns5:hasMember ;
+    void:property ns4:hasMember ;
     void:triples 163 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_hasTime> a void:Dataset,
@@ -74382,7 +74382,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: isbn"@en ;
-    void:property ns4:isbn ;
+    void:property ns5:isbn ;
     void:triples 3 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_issn> a void:Dataset,
@@ -74390,7 +74390,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: issn"@en ;
-    void:property ns4:issn ;
+    void:property ns5:issn ;
     void:triples 2 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_issuer> a void:Dataset,
@@ -74398,7 +74398,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: issuer"@en ;
-    void:property ns4:issuer ;
+    void:property ns5:issuer ;
     void:triples 108 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_label> a void:Dataset,
@@ -74438,7 +74438,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: number"@en ;
-    void:property ns4:number ;
+    void:property ns5:number ;
     void:triples 51 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_pageEnd> a void:Dataset,
@@ -74446,7 +74446,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: pageEnd"@en ;
-    void:property ns4:pageEnd ;
+    void:property ns5:pageEnd ;
     void:triples 110 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_pageStart> a void:Dataset,
@@ -74454,7 +74454,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: pageStart"@en ;
-    void:property ns4:pageStart ;
+    void:property ns5:pageStart ;
     void:triples 110 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_partOf> a void:Dataset,
@@ -74518,7 +74518,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: volume"@en ;
-    void:property ns4:volume ;
+    void:property ns5:volume ;
     void:triples 86 .
 
 <http://data.archaeology.link/data/spphaefen/1000_foundation> a time:TemporalEntity,
@@ -144844,32 +144844,32 @@
     foaf:family_Name "für Kärnten"@en ;
     foaf:firstName "L"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Alves_1986_Piroga> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Alves_1986_Piroga> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1986"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS> ;
     dc:title "A piroga monóxila de Geraz do Lima"@en ;
-    ns4:issuer "O Arqueólogo Portugués" ;
-    ns4:pageEnd 234 ;
-    ns4:pageStart 209 ;
+    ns5:issuer "O Arqueólogo Portugués" ;
+    ns5:pageEnd 234 ;
+    ns5:pageStart 209 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Alves_2009_Archeologie> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Alves_2009_Archeologie> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2009"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS> ;
     dc:title "L'archéologie fluviale: au Portugal"@en ;
-    ns4:issuer "Les Dossiers d'archéologie (Dijon)" ;
-    ns4:number 331 ;
-    ns4:pageEnd 81 ;
-    ns4:pageStart 78 ;
+    ns5:issuer "Les Dossiers d'archéologie (Dijon)" ;
+    ns5:number 331 ;
+    ns5:pageEnd 81 ;
+    ns5:pageStart 78 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1975_Gallo> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1975_Gallo> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -144877,41 +144877,41 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> ;
     dc:title "The Gallo-Roman boat from the Bay of Bevaix, Lake Neuchâtel, Switzerland"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 141 ;
-    ns4:pageStart 123 ;
-    ns4:volume "4"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 141 ;
+    ns5:pageStart 123 ;
+    ns5:volume "4"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1991_Gallo> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1991_Gallo> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1991"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> ;
     dc:title "The Gallo-Roman boat of Bevaix and the bottom based construction"@en ;
-    ns4:issuer "Carvel Construction Technique" ;
-    ns4:pageEnd 23 ;
-    ns4:pageStart 19 ;
-    ns4:volume "12"^^xsd:string ;
+    ns5:issuer "Carvel Construction Technique" ;
+    ns5:pageEnd 23 ;
+    ns5:pageStart 19 ;
+    ns5:volume "12"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Becker_1987_Einbaum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Becker_1987_Einbaum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1987"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Becker_D> ;
     dc:title "Der Einbaum von Neuburg, Kr. Parchim"@en ;
-    ns4:issuer <https://www.wikidata.org/entity/Q778919> ;
-    ns4:number 3 ;
-    ns4:pageEnd 151 ;
-    ns4:pageStart 149 ;
-    ns4:volume "32"^^xsd:string ;
+    ns5:issuer <https://www.wikidata.org/entity/Q778919> ;
+    ns5:number 3 ;
+    ns5:pageEnd 151 ;
+    ns5:pageStart 149 ;
+    ns5:volume "32"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Beltrame_2009_New> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Beltrame_2009_New> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -144919,27 +144919,27 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Beltrame_Carlo> ;
     dc:title "A new view of the interpretation of the presumed medieval Po delta wrecks, Italy"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 2 ;
-    ns4:pageEnd 417 ;
-    ns4:pageStart 412 ;
-    ns4:volume "38"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 2 ;
+    ns5:pageEnd 417 ;
+    ns5:pageStart 412 ;
+    ns5:volume "38"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Berger_1972_Fruhgeschichtlicher> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Berger_1972_Fruhgeschichtlicher> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1972"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Berger_Hans-Georg> ;
     dc:title "Ein frühgeschichtlicher Einbaumfund aus der Aller bei Wienhausen, Kr. Celle"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q23785465> ;
-    ns4:pageEnd 232 ;
-    ns4:pageStart 231 ;
-    ns4:volume "41"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q23785465> ;
+    ns5:pageEnd 232 ;
+    ns5:pageStart 231 ;
+    ns5:volume "41"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Berti_1990_Fortuna> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Berti_1990_Fortuna> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -144949,19 +144949,19 @@
     dcterms:publisher "Nuova alfa editoriale" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Billamboz_2000_Schiffbau> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Billamboz_2000_Schiffbau> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Billamboz_André> ;
     dc:title "Schiffbau und Waldlandschaft am Bodensee. Holzuntersuchungen an Schiffswracks und Uferkonstruktionen"@en ;
-    ns4:issuer "Einbaum, Lastensegler, Dampfschiff. Frühe Schifffahrt in Südwestdeutschland (Stuttgart 2000)" ;
-    ns4:pageEnd 50 ;
-    ns4:pageStart 41 ;
+    ns5:issuer "Einbaum, Lastensegler, Dampfschiff. Frühe Schifffahrt in Südwestdeutschland (Stuttgart 2000)" ;
+    ns5:pageEnd 50 ;
+    ns5:pageStart 41 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Billig_2008_Spatmittelalterliches> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Billig_2008_Spatmittelalterliches> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -144969,103 +144969,103 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Billig_M> ;
     dc:title "Ein spätmittelalterliches Schiffswrack im Rathjensee bei Wörth am Rhein"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q1420342> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636535> ;
-    ns4:number 2 ;
-    ns4:pageEnd 48 ;
-    ns4:pageStart 47 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636535> ;
+    ns5:number 2 ;
+    ns5:pageEnd 48 ;
+    ns5:pageStart 47 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Binggeli_1997_Bronzezeitliche> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Binggeli_1997_Bronzezeitliche> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1997"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bingeli_M> ;
     dc:title "Der bronzezeitliche Einbaum von Vingelz: Ein moderner Nachbau"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q298183> ;
-    ns4:number 3 ;
-    ns4:pageEnd 111 ;
-    ns4:pageStart 106 ;
-    ns4:volume "20"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q298183> ;
+    ns5:number 3 ;
+    ns5:pageEnd 111 ;
+    ns5:pageStart 106 ;
+    ns5:volume "20"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bleile_2005_Ergebnisse> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bleile_2005_Ergebnisse> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2005"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bleile_Ralf> ;
     dc:title "Ergebnisse unterwasserarchäologischer Untersuchungen in den Binnenseen Mecklenburg-Vorpommerns (2000--2004)"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:number 12 ;
-    ns4:pageEnd 120 ;
-    ns4:pageStart 103 ;
-    ns4:volume "11"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:number 12 ;
+    ns5:pageEnd 120 ;
+    ns5:pageStart 103 ;
+    ns5:volume "11"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2000_Antike> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2000_Antike> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> ;
     dc:title "Antike Prahme. Monumentale Zeugnisse keltisch-römischer Binnenschiffahrt aus der Zeit vom 2. Jh. v. Chr. bis ins 3. Jh. n. Chr."@en ;
-    ns4:issuer "Jahrbuch des römisch-germanischen Zentralmuseums Mainz" ;
-    ns4:number 2 ;
-    ns4:pageEnd 493 ;
-    ns4:pageStart 439 ;
-    ns4:volume "47"^^xsd:string ;
+    ns5:issuer "Jahrbuch des römisch-germanischen Zentralmuseums Mainz" ;
+    ns5:number 2 ;
+    ns5:pageEnd 493 ;
+    ns5:pageStart 439 ;
+    ns5:volume "47"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonnamour_2012_Vallee> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bonnamour_2012_Vallee> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2012"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonnamour_Louis> ;
     dc:title "La vallée du Doubs, axe de communications à travers les âges"@en ;
-    ns4:issuer "Trois rivières (Champforgueil)" ;
-    ns4:number 78 ;
-    ns4:pageEnd 16 ;
-    ns4:pageStart 3 ;
+    ns5:issuer "Trois rivières (Champforgueil)" ;
+    ns5:number 78 ;
+    ns5:pageEnd 16 ;
+    ns5:pageStart 3 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Chevallier_2013_Arles> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Chevallier_2013_Arles> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2013"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Chevallier_Franck> ;
     dc:title "Arles-Rhône 3: Un géant du fleuve entre au musée"@en ;
-    ns4:issuer "Archeologia (Paris)" ;
-    ns4:number 515 ;
-    ns4:pageEnd 21 ;
-    ns4:pageStart 16 ;
+    ns5:issuer "Archeologia (Paris)" ;
+    ns5:number 515 ;
+    ns5:pageEnd 21 ;
+    ns5:pageStart 16 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Delpino_2009_Ricerca> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Delpino_2009_Ricerca> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2009"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Delpino_Chiara> ;
     dc:title "La Ricerca archeologica in acque interne: il villaggio neolitico de 'la marmotta' sulle antiche sponde del lago di bracciano (Anguillara Sabazia, Roma)"@en ;
-    ns4:pageEnd 274 ;
-    ns4:pageStart 263 ;
+    ns5:pageEnd 274 ;
+    ns5:pageStart 263 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Egloff_1974_Barque> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Egloff_1974_Barque> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1974"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Egloff_M> ;
     dc:title "La barque de Bevaix, epave gallo-romaine du lac de Neuchatel"@en ;
-    ns4:issuer "Helvetia Archaeologica" ;
-    ns4:volume "19"^^xsd:string ;
+    ns5:issuer "Helvetia Archaeologica" ;
+    ns5:volume "19"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1983_Warenumschlag> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1983_Warenumschlag> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145073,26 +145073,26 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ellmers_Detlev> ;
     dc:title "Warenumschlag zwischen Schiff und Wagen im Wasser"@en ;
     dcterms:publisher "DEU" ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715836> ;
-    ns4:pageEnd 241 ;
-    ns4:pageStart 209 ;
-    ns4:volume "6"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715836> ;
+    ns5:pageEnd 241 ;
+    ns5:pageStart 209 ;
+    ns5:volume "6"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1996_Celtic> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1996_Celtic> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1996"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ellmers_Detlev> ;
     dc:title "Celtic Plank Boats and Ships, 500 BC--AD 1000"@en ;
-    ns4:issuer "Conway’s History of the Ship" ;
-    ns4:pageEnd 71 ;
-    ns4:pageStart 52 ;
-    ns4:volume "1"^^xsd:string ;
+    ns5:issuer "Conway’s History of the Ship" ;
+    ns5:pageEnd 71 ;
+    ns5:pageStart 52 ;
+    ns5:volume "1"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Fielitz_2003_Einbaumfund> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Fielitz_2003_Einbaumfund> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145100,24 +145100,24 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Fielitz_Wilhelm> ;
     dc:title "Ein Einbaumfund bei Forst an der Oberweser 1938"@en ;
     dcterms:publisher "DEU" ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715836> ;
-    ns4:pageEnd 134 ;
-    ns4:pageStart 125 ;
-    ns4:volume "26"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715836> ;
+    ns5:pageEnd 134 ;
+    ns5:pageStart 125 ;
+    ns5:volume "26"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Foxon_1997_Hasholme> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Foxon_1997_Hasholme> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1997"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Foxon_Andrew_D> ;
     dc:title "The Hasholme Iron Age logboat: 17 metres of trouble!"@en ;
-    ns4:pageEnd 553 ;
-    ns4:pageStart 547 ;
+    ns5:pageEnd 553 ;
+    ns5:pageStart 547 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gaspari_1998_Frachtschiff> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Gaspari_1998_Frachtschiff> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145127,7 +145127,7 @@
     dcterms:publisher "Römisch-Germanisches Zentralmuseum" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gaspari_2003_Archaeology> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Gaspari_2003_Archaeology> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145135,35 +145135,35 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Gaspari_Andrej> ;
     dc:title "Archaeology of the Ljubljanica River (Slovenia): early underwater investigations and some current issues"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 52 ;
-    ns4:pageStart 42 ;
-    ns4:volume "32"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 52 ;
+    ns5:pageStart 42 ;
+    ns5:volume "32"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gresser_2008_Peche> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Gresser_2008_Peche> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2008"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Gresser_Pierre> ;
     dc:title "Pêche et pisciculture dans les eaux princières en Franche-Comté aux XIVe et XVe siècles"@en ;
-    ns4:doi "10.1484/M.BURG-EB.5.105849"^^xsd:string ;
+    ns5:doi "10.1484/M.BURG-EB.5.105849"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gräf_2006_Boat> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Gräf_2006_Boat> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2006"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Gräf_Daniela> ;
     dc:title "Boat Mills in Europe from Early Medieval to Modern Times. Ver{'o}ffentlichungen des Landesamtes für Archäologie mit Landesmuseum für Vorgeschichte"@en ;
-    ns4:issuer "Bibliotheca Molinologica" ;
-    ns4:volume "19"^^xsd:string ;
+    ns5:issuer "Bibliotheca Molinologica" ;
+    ns5:volume "19"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hafner_2010_Ipsach> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hafner_2010_Ipsach> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145171,13 +145171,13 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hafner_Albert> ;
     dc:title "Ipsach, Bahnweg. Bergung eines spätmittelalterlichen Wasserfahrzeugs"@en ;
     dcterms:publisher "Rub Media" ;
-    ns4:issuer "Archäologie Bern-Jahrbuch des Archäologischen Dienstes des Kantons Bern" ;
-    ns4:pageEnd 95 ;
-    ns4:pageStart 94 ;
-    ns4:volume "2010"^^xsd:string ;
+    ns5:issuer "Archäologie Bern-Jahrbuch des Archäologischen Dienstes des Kantons Bern" ;
+    ns5:pageEnd 95 ;
+    ns5:pageStart 94 ;
+    ns5:volume "2010"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hakelberg_1996_14th> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hakelberg_1996_14th> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145185,14 +145185,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hakelberg_Dietrich> ;
     dc:title "A 14th-century vessel from Immenstaad (Lake Constance, southern Germany)"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number "3-4"^^xsd:integer ;
-    ns4:pageEnd 233 ;
-    ns4:pageStart 224 ;
-    ns4:volume "25"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number "3-4"^^xsd:integer ;
+    ns5:pageEnd 233 ;
+    ns5:pageStart 224 ;
+    ns5:volume "25"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hensel_2014_Holzern> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hensel_2014_Holzern> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145200,13 +145200,13 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hensel_N> ;
     dc:title "Mit einer «hölzern Wurzel»"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q1420342> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q636535> ;
-    ns4:number 3 ;
-    ns4:pageEnd 44 ;
-    ns4:pageStart 44 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q636535> ;
+    ns5:number 3 ;
+    ns5:pageEnd 44 ;
+    ns5:pageStart 44 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Heron_1990_Caulking> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Heron_1990_Caulking> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145214,49 +145214,49 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Heron_C> ;
     dc:title "Caulking and waterproofing agents used on the Tredunnoc boat: evidence for its date"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 3 ;
-    ns4:pageEnd 248 ;
-    ns4:pageStart 247 ;
-    ns4:volume "19"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 3 ;
+    ns5:pageEnd 248 ;
+    ns5:pageStart 247 ;
+    ns5:volume "19"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hinz_1962_Einige> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hinz_1962_Einige> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1962"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hinz_Hermann> ;
     dc:title "Einige niederrheinische Fundstellen mit mittelalterlicher Keramik"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q892739> ;
-    ns4:volume "162"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q892739> ;
+    ns5:volume "162"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hochuli_1998_Archaologie> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hochuli_1998_Archaologie> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1998"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hochuli_Stefan> ;
     dc:title "Archäologie im Zugersee"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:pageEnd 23 ;
-    ns4:pageStart 16 ;
-    ns4:volume "4"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:pageEnd 23 ;
+    ns5:pageStart 16 ;
+    ns5:volume "4"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hutchings_1997_Conservation> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Hutchings_1997_Conservation> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1997"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hutchings_Jeremy> ;
     dc:title "The conservation of the Poole log-boat: sucrose treatment on a large scale"@en ;
-    ns4:pageEnd 291 ;
-    ns4:pageStart 281 ;
+    ns5:pageEnd 291 ;
+    ns5:pageStart 281 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hyttel_2011_Digital> a ns4:Thesis,
+<http://data.archaeology.link/data/spphaefen/bib_Hyttel_2011_Digital> a ns5:Thesis,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145265,33 +145265,33 @@
     dc:title "Digital recording in maritime archaeology: Total Station, Rhinoceros and Termite"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ilves_2010_Searching> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ilves_2010_Searching> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2010"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ilves_Kristin> ;
     dc:title "Searching for sunken legends in dark waters: Estonian lakes in archaeology"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15817170> ;
-    ns4:number 2 ;
-    ns4:pageEnd 153 ;
-    ns4:pageStart 149 ;
-    ns4:volume "10"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15817170> ;
+    ns5:number 2 ;
+    ns5:pageEnd 153 ;
+    ns5:pageStart 149 ;
+    ns5:volume "10"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Izaguirre_2006_Urbieta> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Izaguirre_2006_Urbieta> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2006"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Izaguirre_Manuel> ;
     dc:title "The Urbieta Wreck (Gernika) Basque Country"@en ;
-    ns4:issuer <https://www.wikidata.org/entity/Q121363522> ;
-    ns4:pageEnd 92 ;
-    ns4:pageStart 90 ;
+    ns5:issuer <https://www.wikidata.org/entity/Q121363522> ;
+    ns5:pageEnd 92 ;
+    ns5:pageStart 90 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Loose_2012_Sekundar> a ns4:Thesis,
+<http://data.archaeology.link/data/spphaefen/bib_Loose_2012_Sekundar> a ns5:Thesis,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145300,17 +145300,17 @@
     dc:title "Sekundär verwendete Schiffsholzfunde aus einem sp{'a}tmittelalterlichen Leitungssystem des Quartier Frankenhof-Stralsund"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Maarleveld_2009_Boomstamboot> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Maarleveld_2009_Boomstamboot> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2009"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Maarleveld_Thijs_J> ;
     dc:title "Boomstamboot Kadoelerveld"@en ;
-    ns4:issuer "Opgravingsrapport. Excavation Report, University of Southern Denmark, Esbjerg" ;
+    ns5:issuer "Opgravingsrapport. Excavation Report, University of Southern Denmark, Esbjerg" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mainberger_2009_Early> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mainberger_2009_Early> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145318,14 +145318,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Mainberger_Martin> ;
     dc:title "An Early Bronze Age Logboat from Degersee, Southern Germany"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 12 ;
-    ns4:pageStart 3 ;
-    ns4:volume "38"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 12 ;
+    ns5:pageStart 3 ;
+    ns5:volume "38"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Manders_2011_Waardestelling> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Manders_2011_Waardestelling> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145335,19 +145335,19 @@
     dcterms:publisher "Amersfoort: Rijksdienst voor het Cultureel Erfgoed" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Marlier_2011_Epave> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Marlier_2011_Epave> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2011"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Marlier_S> ;
     dc:title "L’épave Arles-Rhône 3: Étude préliminaire d’un chaland gallo-romain"@en ;
-    ns4:issuer "Batellerie gallo-romaine: pratiques régionales et influences maritimes méditerranéennes. Actes de la table ronde internationale, Aix-en-Provence" ;
-    ns4:pageEnd 151 ;
-    ns4:pageStart 131 ;
+    ns5:issuer "Batellerie gallo-romaine: pratiques régionales et influences maritimes méditerranéennes. Actes de la table ronde internationale, Aix-en-Provence" ;
+    ns5:pageEnd 151 ;
+    ns5:pageStart 131 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Medas_2014_Piroga> a ns4:Collection,
+<http://data.archaeology.link/data/spphaefen/bib_Medas_2014_Piroga> a ns5:Collection,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145355,11 +145355,11 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Medas_Stefano> ;
     dc:title "La piroga rinvenuta nel fiume Po presso Boretto (Reggio Emilia)"@en ;
     dcterms:publisher "libreriauniversitaria.it" ;
-    ns4:pageEnd 147 ;
-    ns4:pageStart 141 ;
+    ns5:pageEnd 147 ;
+    ns5:pageStart 141 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Mordant_1998_Barque> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Mordant_1998_Barque> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145367,28 +145367,28 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Mordant_Daniel> ;
     dc:title "La barque monoxyle carolingienne de Noyen-sur-Seine (Seine-et-Marne)"@en ;
     dcterms:publisher "Persée-Portail des revues scientifiques en SHS" ;
-    ns4:issuer "Archaeonautica" ;
-    ns4:number 1 ;
-    ns4:pageEnd 27 ;
-    ns4:pageStart 23 ;
-    ns4:volume "14"^^xsd:string ;
+    ns5:issuer "Archaeonautica" ;
+    ns5:number 1 ;
+    ns5:pageEnd 27 ;
+    ns5:pageStart 23 ;
+    ns5:volume "14"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Nauta_2008_Dateren> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Nauta_2008_Dateren> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2008"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Nauta_A> ;
     dc:title "Dateren mbv jaarringpatronen: Het vergaan van het Romeinse schip'De Meern 1'"@en ;
-    ns4:issuer "Gea" ;
-    ns4:number 1 ;
-    ns4:pageEnd 22 ;
-    ns4:pageStart 19 ;
-    ns4:volume "41"^^xsd:string ;
+    ns5:issuer "Gea" ;
+    ns5:number 1 ;
+    ns5:pageEnd 22 ;
+    ns5:pageStart 19 ;
+    ns5:volume "41"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Niblett_2001_Neolithic> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Niblett_2001_Neolithic> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145396,14 +145396,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Niblett_Rosalind> ;
     dc:title "A Neolithic dugout from a multi-period site near St Albans, Herts, England"@en ;
     dcterms:publisher "Elsevier" ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 2 ;
-    ns4:pageEnd 195 ;
-    ns4:pageStart 155 ;
-    ns4:volume "30"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 2 ;
+    ns5:pageEnd 195 ;
+    ns5:pageStart 155 ;
+    ns5:volume "30"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Nielsen_2005_Unterwasserprospektion> a ns4:Document,
+<http://data.archaeology.link/data/spphaefen/bib_Nielsen_2005_Unterwasserprospektion> a ns5:Document,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145413,44 +145413,44 @@
     dcterms:publisher "Nach" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pflederer_1999_Vergessener> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Pflederer_1999_Vergessener> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1999"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pflederer_Tobias> ;
     dc:title "Ein “vergessener” Einbaum im Starnberger See"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:volume "5"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:volume "5"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2001_Aktuelle> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2001_Aktuelle> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2001"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pflederer_Tobias> ;
     dc:title "Aktuelle Forschungen in bayerischen Seen"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:pageEnd 26 ;
-    ns4:pageStart 21 ;
-    ns4:volume "8"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:pageEnd 26 ;
+    ns5:pageStart 21 ;
+    ns5:volume "8"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2002_Einbaum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2002_Einbaum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2002"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pflederer_Tobias> ;
     dc:title "Ein Einbaum der Latènezeit aus dem Starnberger See"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:pageEnd 19 ;
-    ns4:pageStart 17 ;
-    ns4:volume "9"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:pageEnd 19 ;
+    ns5:pageStart 17 ;
+    ns5:volume "9"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rech_2004_Gefundene> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Rech_2004_Gefundene> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145460,7 +145460,7 @@
     dcterms:publisher "Landesarchäologe" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Recker_2005_Fruhmittelalterlicher> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Recker_2005_Fruhmittelalterlicher> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145469,18 +145469,18 @@
     dc:title "Ein frühmittelalterlicher Einbaum aus Gießen"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rieth_2013_Epave> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Rieth_2013_Epave> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2013"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Rieth_Éric> ;
     dc:title "L'épave de la première moitié du xve siècle de la Canche à Beutin (Pas-de-Calais). Archéologie nautique d'un caboteur fluvio-maritime et d'un territoire fluvial"@en ;
-    ns4:issuer "Revue du Nord. Collection Archéologie (Hors série)" ;
-    ns4:volume "20"^^xsd:string ;
+    ns5:issuer "Revue du Nord. Collection Archéologie (Hors série)" ;
+    ns5:volume "20"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rieth_2017_22> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Rieth_2017_22> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145489,7 +145489,7 @@
     dc:title "22. The shipwreck (EP1-Canche) of a fluvial-maritime coaster of the first half of the 15th century from Beutin (Pas-de-Calais, France). Its nautical environment and functional context"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Roberts_1995_Brigg> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Roberts_1995_Brigg> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145497,14 +145497,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Roberts_Owain_TP> ;
     dc:title "The Brigg ‘raft’: a flat-bottomed boat. A response"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 2 ;
-    ns4:pageEnd 160 ;
-    ns4:pageStart 159 ;
-    ns4:volume "24"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 2 ;
+    ns5:pageEnd 160 ;
+    ns5:pageStart 159 ;
+    ns5:volume "24"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Roberts_1996_Boat> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Roberts_1996_Boat> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145512,41 +145512,41 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Roberts_Owain_TP> ;
     dc:title "The boat from Lough Neagh"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q70631906> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number "3-4"^^xsd:integer ;
-    ns4:pageEnd 266 ;
-    ns4:pageStart 265 ;
-    ns4:volume "25"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number "3-4"^^xsd:integer ;
+    ns5:pageEnd 266 ;
+    ns5:pageStart 265 ;
+    ns5:volume "25"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Salemke_1973_Ausgrabung> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Salemke_1973_Ausgrabung> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1973"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Salemke_Gerhard> ;
     dc:title "Die Ausgrabung eines Binnensee Transportschiffes. Schiffsarchaeologia von 1890 aus Laidbach, Osterreich (jetzt Ljubljana in Jugoslavia)"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715982> ;
-    ns4:number 1 ;
-    ns4:pageEnd 24 ;
-    ns4:pageStart 21 ;
-    ns4:volume "9"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715982> ;
+    ns5:number 1 ;
+    ns5:pageEnd 24 ;
+    ns5:pageStart 21 ;
+    ns5:volume "9"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Salemke_1977_Einbaum> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Salemke_1977_Einbaum> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1977"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Salemke_Gerhard> ;
     dc:title "Der Einbaum mit Spanten von der Lecker Au, Kreis Südtondern"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715982> ;
-    ns4:pageEnd 9 ;
-    ns4:pageStart 7 ;
-    ns4:volume "13"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715982> ;
+    ns5:pageEnd 9 ;
+    ns5:pageStart 7 ;
+    ns5:volume "13"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Schletter_2012_Kaiserswerther> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Schletter_2012_Kaiserswerther> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145554,26 +145554,26 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Schletter_Hans-Peter> ;
     dc:title "Der Kaiserswerther Nachen: ein archäologischer Beitrag zur Rheinschifffahrt der Frühen Neuzeit"@en ;
     dcterms:publisher "DEU" ;
-    ns4:issuer <http://www.wikidata.org/entity/Q27715836> ;
-    ns4:pageEnd 72 ;
-    ns4:pageStart 13 ;
-    ns4:volume "35"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q27715836> ;
+    ns5:pageEnd 72 ;
+    ns5:pageStart 13 ;
+    ns5:volume "35"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Schneider_1972_Zwei> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Schneider_1972_Zwei> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1972"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Schneider_J> ;
     dc:title "Zwei neue frühgeschichtliche Mahlsteinfunde aus der Altmark"@en ;
-    ns4:issuer "Ausgr. u. Funde" ;
-    ns4:pageEnd 38 ;
-    ns4:pageStart 35 ;
-    ns4:volume "17"^^xsd:string ;
+    ns5:issuer "Ausgr. u. Funde" ;
+    ns5:pageEnd 38 ;
+    ns5:pageStart 35 ;
+    ns5:volume "17"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vermeersch_2011_Meinerswijk> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Vermeersch_2011_Meinerswijk> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145582,7 +145582,7 @@
     dc:title "Meinerswijk 3 Revisited"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vlek_1987_Mediaeval> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Vlek_1987_Mediaeval> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145592,7 +145592,7 @@
     dcterms:publisher "Oxford: BAR" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vorst_2005_Constructie> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Vorst_2005_Constructie> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145601,7 +145601,7 @@
     dc:title "De constructie en herkomst van de Romeinse platbodem'Woerden 7': een studie van jaarringpatronen en bewerkingssporen"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Zwick_2017_48> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Zwick_2017_48> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145799,55 +145799,55 @@
     foaf:family_Name "ers"@en ;
     foaf:firstName "Martijn"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Andersen_1994_New> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Andersen_1994_New> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1994"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Andersen_Soren_H> ;
     dc:title "New finds of Mesolithic logboats in Denmark"@en ;
-    ns4:pageEnd 10 ;
-    ns4:pageStart 1 ;
+    ns5:pageEnd 10 ;
+    ns5:pageStart 1 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1980_Bevaix> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1980_Bevaix> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1980"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> ;
     dc:title "Bevaix NE 1917: un monoxyle celte et ses courbes hydrostatiques"@en ;
-    ns4:issuer "Jahrbuch der Schweizerischen Gesellschaft für Ur-und Frühgeschichte Basel" ;
-    ns4:pageEnd 199 ;
-    ns4:pageStart 185 ;
-    ns4:volume "63"^^xsd:string ;
+    ns5:issuer "Jahrbuch der Schweizerischen Gesellschaft für Ur-und Frühgeschichte Basel" ;
+    ns5:pageEnd 199 ;
+    ns5:pageStart 185 ;
+    ns5:volume "63"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonino_1983_Imbarcazioni> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bonino_1983_Imbarcazioni> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1983"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonino_Marco> ;
     dc:title "Le imbarcazioni monossili in Italia"@en ;
-    ns4:issuer "Bollettino del Museo Civico di Padova, n" ;
-    ns4:pageEnd 77 ;
-    ns4:pageStart 51 ;
-    ns4:volume "72"^^xsd:string ;
+    ns5:issuer "Bollettino del Museo Civico di Padova, n" ;
+    ns5:pageEnd 77 ;
+    ns5:pageStart 51 ;
+    ns5:volume "72"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonino_1985_Sewn> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Bonino_1985_Sewn> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1985"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonino_Marco> ;
     dc:title "Sewn boats in Italy: sutiles naves and barche cucite"@en ;
-    ns4:pageEnd 104 ;
-    ns4:pageStart 87 ;
+    ns5:pageEnd 104 ;
+    ns5:pageStart 87 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonino_2003_Sogno> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Bonino_2003_Sogno> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145857,18 +145857,18 @@
     dcterms:publisher "Felici" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonnin_1998_Decouverte> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Bonnin_1998_Decouverte> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonnin_Philippe> ;
     dc:title "Découverte de deux pirogues monoxyles mésolithiques entre Corbeil-Essonnes (Essonne) et Melun (Seine-et-Marne)"@en ;
-    ns4:pageEnd 311 ;
-    ns4:pageStart 305 ;
+    ns5:pageEnd 311 ;
+    ns5:pageStart 305 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Capulli_2014_Waterlands> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Capulli_2014_Waterlands> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145877,33 +145877,33 @@
     dc:title "Waterlands. The eco-historical landscape of the Stella River"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Dammann_1974_Rheinschiffe> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Dammann_1974_Rheinschiffe> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1974"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Dammann_Werner> ;
     dc:title "Rheinschiffe aus Krefeld und Zwammerdam"@en ;
-    ns4:issuer <https://www.wikidata.org/entity/Q27715982> ;
-    ns4:number 1 ;
-    ns4:pageEnd 10 ;
-    ns4:pageStart 4 ;
-    ns4:volume "10"^^xsd:string ;
+    ns5:issuer <https://www.wikidata.org/entity/Q27715982> ;
+    ns5:number 1 ;
+    ns5:pageEnd 10 ;
+    ns5:pageStart 4 ;
+    ns5:volume "10"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Jovanovic_1996_Topography> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Jovanovic_1996_Topography> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1996"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Jovanović_Dj> ;
     dc:title "Topography of Aquae-Prahovo"@en ;
-    ns4:issuer "Roman Limes on the Middle and Lower Danube" ;
-    ns4:pageEnd 264 ;
-    ns4:pageStart 263 ;
+    ns5:issuer "Roman Limes on the Middle and Lower Danube" ;
+    ns5:pageEnd 264 ;
+    ns5:pageStart 263 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lithberg_1932_Fundgegenstande> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Lithberg_1932_Fundgegenstande> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145913,7 +145913,7 @@
     dcterms:publisher "A.-B. Centraltryckeriet" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Manders_2017_76> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Manders_2017_76> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145922,7 +145922,7 @@
     dc:title "76. A coincidence? Two medieval boats (Vleuten 1 and 2) found during the construction of a housing development at Leidsche Rijn (the Netherlands)"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Petrovic_1991_Donauhafen> a ns4:Proceedings,
+<http://data.archaeology.link/data/spphaefen/bib_Petrovic_1991_Donauhafen> a ns5:Proceedings,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -145931,32 +145931,32 @@
         <http://data.archaeology.link/data/spphaefen/author_Maxfield_VA>,
         <http://data.archaeology.link/data/spphaefen/author_Petrović_Petar> ;
     dc:title "Ein Donauhafen von Trajan bei dem Kastell Aquae (Moesia Superior)"@en ;
-    ns4:pageEnd 8 ;
-    ns4:pageStart 295 ;
+    ns5:pageEnd 8 ;
+    ns5:pageStart 295 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ucelli_1950_Navi> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Ucelli_1950_Navi> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1950"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ucelli_Guido> ;
     dc:title "Le Navi di Nemi"@en ;
-    ns4:issuer "fig" ;
-    ns4:volume "200"^^xsd:string ;
+    ns5:issuer "fig" ;
+    ns5:volume "200"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Zwick_2012_Variationen> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Zwick_2012_Variationen> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2012"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Zwick_Daniel> ;
     dc:title "Variationen in der mittelalterlichen Schiffbautechnik anhand von Wrackfunden in Bremen"@en ;
-    ns4:issuer "Mitteilungen der deutschen Gesellschaft für Archäologie des Mittelalters und der Neuzeit" ;
-    ns4:pageEnd 298 ;
-    ns4:pageStart 283 ;
-    ns4:volume "24"^^xsd:string ;
+    ns5:issuer "Mitteilungen der deutschen Gesellschaft für Archäologie des Mittelalters und der Neuzeit" ;
+    ns5:pageEnd 298 ;
+    ns5:pageStart 283 ;
+    ns5:volume "24"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146004,7 +146004,7 @@
     foaf:family_Name "von Berg"@en ;
     foaf:firstName "Axel"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Andersen_1985_Tybrind> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Andersen_1985_Tybrind> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146012,53 +146012,53 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Andersen_Soren_H> ;
     dc:title "Tybrind Vig: a preliminary report on a submerged Ertebølle settlement on the west coast of Fyn"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15765043> ;
-    ns4:number 1 ;
-    ns4:pageEnd 69 ;
-    ns4:pageStart 52 ;
-    ns4:volume "4"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15765043> ;
+    ns5:number 1 ;
+    ns5:pageEnd 69 ;
+    ns5:pageStart 52 ;
+    ns5:volume "4"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Andersen_1987_Mesolithic> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Andersen_1987_Mesolithic> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1987"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Andersen_Soren_H> ;
     dc:title "Mesolithic dug-outs and paddles from Tybrind Vig, Denmark"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q4676717> ;
-    ns4:pageEnd 106 ;
-    ns4:pageStart 87 ;
-    ns4:volume "57"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q4676717> ;
+    ns5:pageEnd 106 ;
+    ns5:pageStart 87 ;
+    ns5:volume "57"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1985_Pirogue> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1985_Pirogue> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1985"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> ;
     dc:title "La pirogue de Châlain-Marigny et quelques considérations sur les monoxyles découverts en France"@en ;
-    ns4:issuer "Présentation des collections du Musée de Lons-le-Saunier, 1. Néolithique, Châlain-Clairvaux, fouilles anciennes" ;
-    ns4:pageEnd 222 ;
-    ns4:pageStart 211 ;
+    ns5:issuer "Présentation des collections du Musée de Lons-le-Saunier, 1. Néolithique, Châlain-Clairvaux, fouilles anciennes" ;
+    ns5:pageEnd 222 ;
+    ns5:pageStart 211 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Billamboz_1992_Bausteine> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Billamboz_1992_Bausteine> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1992"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Billamboz_André> ;
     dc:title "Bausteine einer lokalen Jahrringchronologie des Federseegebietes"@en ;
-    ns4:issuer "Fundberichte aus Baden-Württemberg" ;
-    ns4:number 1 ;
-    ns4:pageEnd 306 ;
-    ns4:pageStart 293 ;
-    ns4:volume "17"^^xsd:string ;
+    ns5:issuer "Fundberichte aus Baden-Württemberg" ;
+    ns5:number 1 ;
+    ns5:pageEnd 306 ;
+    ns5:pageStart 293 ;
+    ns5:volume "17"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonino_1978_Archeologia> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Bonino_1978_Archeologia> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146066,48 +146066,48 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonino_Marco> ;
     dc:title "Archeologia e tradizione navale tra la Romagna e il Po"@en ;
     dcterms:publisher "Longo" ;
-    ns4:volume "5"^^xsd:string ;
+    ns5:volume "5"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonnet_1982_Ports> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bonnet_1982_Ports> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1982"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonnet_F> ;
     dc:title "Les ports romains d’Aventicum"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q298183> ;
-    ns4:pageEnd 31 ;
-    ns4:pageStart 127 ;
-    ns4:volume "5"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q298183> ;
+    ns5:pageEnd 31 ;
+    ns5:pageStart 127 ;
+    ns5:volume "5"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bögli_1974_Vestige> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bögli_1974_Vestige> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1974"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bögli_H> ;
     dc:title "Vestige d'une embarcation romaine à Avenches"@en ;
-    ns4:issuer "Helvetia archaeologica (Basel)" ;
-    ns4:number 20 ;
-    ns4:pageEnd 3 ;
-    ns4:pageStart 92 ;
-    ns4:volume "19"^^xsd:string ;
+    ns5:issuer "Helvetia archaeologica (Basel)" ;
+    ns5:number 20 ;
+    ns5:pageEnd 3 ;
+    ns5:pageStart 92 ;
+    ns5:volume "19"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Capulli_2013_Ships> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Capulli_2013_Ships> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2013"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Capulli_Massimo> ;
     dc:title "Ships of Aquileia"@en ;
-    ns4:issuer "Underwater archaeological research on marine and inland routes of the Upper Adriatic Sea. Skyllis-Zeitschrift für Unterwasserarchäologie" ;
-    ns4:volume "13"^^xsd:string ;
+    ns5:issuer "Underwater archaeological research on marine and inland routes of the Upper Adriatic Sea. Skyllis-Zeitschrift für Unterwasserarchäologie" ;
+    ns5:volume "13"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Nymoen_2008_Boats> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Nymoen_2008_Boats> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146115,14 +146115,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Nymoen_Paal> ;
     dc:title "Boats for rivers and mountains: sources for new narratives about river travel?"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 16 ;
-    ns4:pageStart 3 ;
-    ns4:volume "37"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 16 ;
+    ns5:pageStart 3 ;
+    ns5:volume "37"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ossowski_2010_Changes> a ns4:Document,
+<http://data.archaeology.link/data/spphaefen/bib_Ossowski_2010_Changes> a ns5:Document,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146132,7 +146132,7 @@
     dcterms:publisher "Skyllis" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Reinders_1983_Drie> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Reinders_1983_Drie> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146142,7 +146142,7 @@
     dcterms:publisher "RWS, FL" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Sorokin_1994_Some> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Sorokin_1994_Some> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146150,12 +146150,12 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pjotr_Sorokin> ;
     dc:title "Some results of the study of medieval boatbuilding traditions in north‐west Russia"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q1508259> ;
-    ns4:doi "10.1111/j.1095-9270.1994.tb00452.x"^^xsd:string ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 2 ;
-    ns4:pageEnd 139 ;
-    ns4:pageStart 129 ;
-    ns4:volume "23"^^xsd:string ;
+    ns5:doi "10.1111/j.1095-9270.1994.tb00452.x"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 2 ;
+    ns5:pageEnd 139 ;
+    ns5:pageStart 129 ;
+    ns5:volume "23"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/author_Capulli_Massimo> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146185,43 +146185,43 @@
     foaf:family_Name "Pflederer"@en ;
     foaf:firstName "Tobias"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Alves_1988_Dugout> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Alves_1988_Dugout> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1988"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS> ;
     dc:title "The dugout of Geraz do Lima"@en ;
-    ns4:issuer "Local Boats. Part II. Oxford" ;
-    ns4:pageEnd 292 ;
-    ns4:pageStart 287 ;
+    ns5:issuer "Local Boats. Part II. Oxford" ;
+    ns5:pageEnd 292 ;
+    ns5:pageStart 287 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2011_Technological> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2011_Technological> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2011"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> ;
     dc:title "Technological Transfer From the Mediterranean to the Northern Provinces"@en ;
-    ns4:issuer "Batellerie gallo-romaine pratiques régionales et influences ma-ritimes méditerranéennes, bibliothèque darchéologie méditerranéenne et africaine" ;
-    ns4:pageEnd 59 ;
-    ns4:pageStart 47 ;
+    ns5:issuer "Batellerie gallo-romaine pratiques régionales et influences ma-ritimes méditerranéennes, bibliothèque darchéologie méditerranéenne et africaine" ;
+    ns5:pageEnd 59 ;
+    ns5:pageStart 47 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Corbiau_2000_Cours> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Corbiau_2000_Cours> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2000"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Corbiau_Marie-Hélène> ;
     dc:title "Les cours d’eau au sein des communications antiques. Les témoignages de l’archéologie en Belgique"@en ;
-    ns4:issuer "archéologie des fleuves et des rivières, red. L. Bonnamour" ;
-    ns4:pageEnd 98 ;
-    ns4:pageStart 94 ;
+    ns5:issuer "archéologie des fleuves et des rivières, red. L. Bonnamour" ;
+    ns5:pageEnd 98 ;
+    ns5:pageStart 94 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Fimpeler_2008_Schifffahrt> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Fimpeler_2008_Schifffahrt> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146230,7 +146230,7 @@
     dc:title "Die Schifffahrt und ihre Fahrzeuge auf dem Niederrhein vom späten Mittelalter bis ins 18. Jahrhundert"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gleirscher_2006_Ertauchte> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Gleirscher_2006_Ertauchte> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146241,7 +146241,7 @@
     dcterms:publisher <https://www.wikidata.org/entity/Q1550018> ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lagadec_1983_LeFlot> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Lagadec_1983_LeFlot> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146249,29 +146249,29 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Lagadec_Jean-Paul> ;
     dc:title "Le Flotteur De Radeau De Flavigny-Sur-Moselle (Meurthe-Et-Moselle)"@en ;
     dcterms:publisher "[Revue Gallia, CNRS Editions]" ;
-    ns4:issn "00164119, 21099588"^^xsd:string ;
-    ns4:issuer <http://www.wikidata.org/entity/Q3094813> ;
-    ns4:number 1 ;
-    ns4:pageEnd 207 ;
-    ns4:pageStart 201 ;
-    ns4:volume "41"^^xsd:string ;
+    ns5:issn "00164119, 21099588"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q3094813> ;
+    ns5:number 1 ;
+    ns5:pageEnd 207 ;
+    ns5:pageStart 201 ;
+    ns5:volume "41"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2005_Einbaume> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Pflederer_2005_Einbaume> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2005"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pflederer_Tobias> ;
     dc:title "Einbäume des Chiemsees"@en ;
-    ns4:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
-    ns4:number 12 ;
-    ns4:pageEnd 44 ;
-    ns4:pageStart 37 ;
-    ns4:volume "11"^^xsd:string ;
+    ns5:issuer "Nachrichtenblatt Arbeitskreis Unterwasserarchäologie" ;
+    ns5:number 12 ;
+    ns5:pageEnd 44 ;
+    ns5:pageStart 37 ;
+    ns5:volume "11"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rieth_2011_Chalands> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Rieth_2011_Chalands> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146279,9 +146279,9 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Guyon_M>,
         <http://data.archaeology.link/data/spphaefen/author_Rieth_Éric> ;
     dc:title "Les chalands gallo-romains du Parc Saint-Georges"@en ;
-    ns4:issuer "Batellerie gallo-romaine. Pratiques régionales et influences maritimes méditerranéennes" ;
-    ns4:pageEnd 102 ;
-    ns4:pageStart 89 ;
+    ns5:issuer "Batellerie gallo-romaine. Pratiques régionales et influences maritimes méditerranéennes" ;
+    ns5:pageEnd 102 ;
+    ns5:pageStart 89 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/author_Bonino_Marco> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146311,7 +146311,7 @@
     foaf:family_Name "de Weerd"@en ;
     foaf:firstName "Maarten Derk"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bonino_1981_Rafts> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Bonino_1981_Rafts> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146319,14 +146319,14 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Bonino_Marco> ;
     dc:title "Rafts And Dugouts In Central Italy The Primitive Phase Of Local Inland Boatbuilding"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <https://www.wikidata.org/entity/Q3293267> ;
-    ns4:number 2 ;
-    ns4:pageEnd 148 ;
-    ns4:pageStart 125 ;
-    ns4:volume "67"^^xsd:string ;
+    ns5:issuer <https://www.wikidata.org/entity/Q3293267> ;
+    ns5:number 2 ;
+    ns5:pageEnd 148 ;
+    ns5:pageStart 125 ;
+    ns5:volume "67"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hamm_2004_Carte> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Hamm_2004_Carte> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146336,7 +146336,7 @@
     dcterms:publisher "Académie des inscriptions et belles-lettres" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rupprecht_1984_Mainzer> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Rupprecht_1984_Mainzer> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146344,7 +146344,7 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Rupprecht_Gerd> ;
     dc:title "Die Mainzer Römerschiffe: Berichte Über Entdeckung, Ausgrabung und Bergung"@en ;
     dcterms:publisher "H. Krach" ;
-    ns4:volume "1"^^xsd:string ;
+    ns5:volume "1"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/author_Bockius_Ronald> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146356,20 +146356,20 @@
     foaf:family_Name "Bockius"@en ;
     foaf:firstName "Ronald"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Arnold_1989_Architecture> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Arnold_1989_Architecture> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1989"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> ;
     dc:title "Architecture navale en Helvétie à l'époque romaine: les barques de Bevaix et d'Yverdon"@en ;
-    ns4:issuer "Helvetia archaeologica" ;
-    ns4:pageEnd 28 ;
-    ns4:pageStart 2 ;
-    ns4:volume "20"^^xsd:string ;
+    ns5:issuer "Helvetia archaeologica" ;
+    ns5:pageEnd 28 ;
+    ns5:pageStart 2 ;
+    ns5:volume "20"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Bockius_2006_Patromischen> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Bockius_2006_Patromischen> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146379,19 +146379,19 @@
     dcterms:publisher <http://www.wikidata.org/entity/Q108267756> ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Boe_1978_Roman> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Boe_1978_Roman> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1978"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_De_Boe_G> ;
     dc:title "Roman boats from a small river harbour at Pommeroeul, Belgium"@en ;
-    ns4:issuer "Roman Shipping and Trade: Britain and the Rhine Provinces, Hertford" ;
-    ns4:pageEnd 30 ;
-    ns4:pageStart 22 ;
+    ns5:issuer "Roman Shipping and Trade: Britain and the Rhine Provinces, Hertford" ;
+    ns5:pageEnd 30 ;
+    ns5:pageStart 22 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Terfve_1998_Remontage> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Terfve_1998_Remontage> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146400,7 +146400,7 @@
     dc:title "Le remontage des barques galloromaines DE POMMEROEUL (BELGIQUE). Étape nécessaire de l'étude archéologique?"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Weerd_1978_Ships> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Weerd_1978_Ships> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146409,7 +146409,7 @@
     dc:title "Ships of the Roman period at Zwammerdam"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Weerd_1990_Barges> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Weerd_1990_Barges> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146417,24 +146417,24 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_de_Weerd_Maarten_Derk> ;
     dc:title "Barges of the Zwammerdam type and their building procedures"@en ;
     dcterms:publisher "London: CBA RR" ;
-    ns4:issuer "Maritime Celts, Frisians and Saxons" ;
-    ns4:pageEnd 76 ;
-    ns4:pageStart 75 ;
-    ns4:volume "71"^^xsd:string ;
+    ns5:issuer "Maritime Celts, Frisians and Saxons" ;
+    ns5:pageEnd 76 ;
+    ns5:pageStart 75 ;
+    ns5:volume "71"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Weerd_2001_Romische> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Weerd_2001_Romische> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2001"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_de_Weerd_Maarten_Derk> ;
     dc:title "Römische Schiffsfunde von Zwammerdam. Lehren aus einer alten Grabung"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15817170> ;
-    ns4:number 2 ;
-    ns4:pageEnd 110 ;
-    ns4:pageStart 96 ;
-    ns4:volume "4"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15817170> ;
+    ns5:number 2 ;
+    ns5:pageEnd 110 ;
+    ns5:pageStart 96 ;
+    ns5:volume "4"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/author_Arnold_Béat> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146446,7 +146446,7 @@
     foaf:family_Name "Arnold"@en ;
     foaf:firstName "Béat"@en .
 
-<http://data.archaeology.link/data/spphaefen/bib_Pohl_2009_Einbaumfunde> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Pohl_2009_Einbaumfunde> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146454,10 +146454,10 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Pohl_Henrik> ;
     dc:title "Einbaumfunde aus dem Salzburger Land"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q1601032> ;
-    ns4:volume "90"^^xsd:string ;
+    ns5:volume "90"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ayala_2009_Lyon> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Ayala_2009_Lyon> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146467,7 +146467,7 @@
     dcterms:publisher "Ed. lyonnaises d'art et d'histoire" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Beaudouin_1985_Bateaux> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Beaudouin_1985_Bateaux> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146477,7 +146477,7 @@
     dcterms:publisher "Editions de l'Estran" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Beltrame_2012_Navi> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Beltrame_2012_Navi> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146485,25 +146485,25 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Beltrame_Carlo>,
         <http://data.archaeology.link/data/spphaefen/author_Paolo_Arata> ;
     dc:title "Le navi di Pisa. Una questione ancora' pendente'"@en ;
-    ns4:issuer "L'ARCHEOLOGO SUBACQUEO" ;
-    ns4:pageEnd 14 ;
-    ns4:pageStart 9 ;
-    ns4:volume "54"^^xsd:string ;
+    ns5:issuer "L'ARCHEOLOGO SUBACQUEO" ;
+    ns5:pageEnd 14 ;
+    ns5:pageStart 9 ;
+    ns5:volume "54"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vlierman_2002_Scheeps> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Vlierman_2002_Scheeps> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2002"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Vlierman_Karel> ;
     dc:title "Scheeps-en stadsarcheologie: de betekenis van scheeps (hout) vondsten in Nederlandse middeleeuwse steden"@en ;
-    ns4:issuer "middeleeuwse toestanden. Archeologie, geschiedenis en monumentenzorg. amersfoort, roB/hilversum, Verloren" ;
-    ns4:pageEnd 148 ;
-    ns4:pageStart 119 ;
+    ns5:issuer "middeleeuwse toestanden. Archeologie, geschiedenis en monumentenzorg. amersfoort, roB/hilversum, Verloren" ;
+    ns5:pageEnd 148 ;
+    ns5:pageStart 119 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Vlierman_1996_Kleine> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Vlierman_1996_Kleine> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146513,7 +146513,7 @@
     dcterms:publisher "Nederlands Instituut voor Scheeps-en onderwaterArcheologie/ROB (NISA)" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Parker_1992_Ancient> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Parker_1992_Ancient> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146523,7 +146523,7 @@
     dcterms:publisher "British Archaeological Reports" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Maurin_1998_3000> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Maurin_1998_3000> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146533,7 +146533,7 @@
     dcterms:publisher "Gaia" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Beaudouin_2004_Anciens> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Beaudouin_2004_Anciens> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146543,7 +146543,7 @@
     dcterms:publisher "Association des amis du Musée de la batellerie" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Böcking_1980_Geschichte> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Böcking_1980_Geschichte> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146552,7 +146552,7 @@
     dc:title "Die Geschichte der Rheinschiffahrt: Schiffe auf dem Rhein in drei Jahrtausenden: Textband"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Okorokov_1995_Archaeological> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Okorokov_1995_Archaeological> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146560,27 +146560,27 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Okorokov_Alex> ;
     dc:title "Archaeological finds of ancient dugouts in Russia and the Ukraine"@en ;
     dcterms:publisher <http://www.wikidata.org/entity/Q880582> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q15750622> ;
-    ns4:number 1 ;
-    ns4:pageEnd 45 ;
-    ns4:pageStart 33 ;
-    ns4:volume "24"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q15750622> ;
+    ns5:number 1 ;
+    ns5:pageEnd 45 ;
+    ns5:pageStart 33 ;
+    ns5:volume "24"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Joncheray_1986_embarcations> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Joncheray_1986_embarcations> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1986"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Joncheray_Didier> ;
     dc:title "Les embarcations monoxyles dans la région des Pays de la Loire"@en ;
-    ns4:issuer "Etudes Préhistoriques et Historiques des Pays de la Loire" ;
-    ns4:pageEnd 13 ;
-    ns4:pageStart 1 ;
-    ns4:volume "9"^^xsd:string ;
+    ns5:issuer "Etudes Préhistoriques et Historiques des Pays de la Loire" ;
+    ns5:pageEnd 13 ;
+    ns5:pageStart 1 ;
+    ns5:volume "9"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Rogers_2009_Boats> a ns4:Thesis,
+<http://data.archaeology.link/data/spphaefen/bib_Rogers_2009_Boats> a ns5:Thesis,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146590,21 +146590,21 @@
     dcterms:publisher <https://www.wikidata.org/entity/Q1414861> ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Cordier_1963_Quelques> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Cordier_1963_Quelques> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1963"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Cordier_Gérard> ;
     dc:title "Quelques mots sur les pirogues monoxyles de France"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q2928058> ;
-    ns4:number "5-6"^^xsd:integer ;
-    ns4:pageEnd 315 ;
-    ns4:pageStart 306 ;
-    ns4:volume "60"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q2928058> ;
+    ns5:number "5-6"^^xsd:integer ;
+    ns5:pageEnd 315 ;
+    ns5:pageStart 306 ;
+    ns5:volume "60"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1972_Fruhmittelalterliche> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Ellmers_1972_Fruhmittelalterliche> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146612,22 +146612,22 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Ellmers_Detlev> ;
     dc:title "Frühmittelalterliche Handelsschiffahrt in Mittel-und Nordeuropa"@en ;
     dcterms:publisher "K. Wachholtz" ;
-    ns4:volume "28"^^xsd:string ;
+    ns5:volume "28"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hermanns_2008_Vor> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Hermanns_2008_Vor> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "2008"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Hermanns_Marcus_Heinrich> ;
     dc:title "Zum vor-und frühgeschichtlichen Wasserverkehr im Gebiet von Nordrhein-Westfalen. Zwei Stammboote im Museum der Deutschen Binnenschifffahrt in Duisburg"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q892739> ;
-    ns4:pageEnd 89 ;
-    ns4:pageStart 73 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q892739> ;
+    ns5:pageEnd 89 ;
+    ns5:pageStart 73 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Cordier_1972_Pirogues> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Cordier_1972_Pirogues> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146635,11 +146635,11 @@
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Cordier_Gérard> ;
     dc:title "Pirogues monoxyles de France (Premier supplément)"@en ;
     dcterms:publisher <https://www.wikidata.org/entity/Q1420342> ;
-    ns4:issuer <http://www.wikidata.org/entity/Q2928058> ;
-    ns4:number 7 ;
-    ns4:pageEnd 211 ;
-    ns4:pageStart 206 ;
-    ns4:volume "69"^^xsd:string ;
+    ns5:issuer <http://www.wikidata.org/entity/Q2928058> ;
+    ns5:number 7 ;
+    ns5:pageEnd 211 ;
+    ns5:pageStart 206 ;
+    ns5:volume "69"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/m_foucher> a <http://www.w3.org/ns/ldp#BasicContainer>,
@@ -146648,7 +146648,7 @@
     rdfs:label "M. Foucher"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Fry_2000_Coiti> a ns4:Book,
+<http://data.archaeology.link/data/spphaefen/bib_Fry_2000_Coiti> a ns5:Book,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146658,7 +146658,7 @@
     dcterms:publisher "Environmental & Heritage Service, Department of the Environment" ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Hirte_1987_Archaologie> a ns4:Thesis,
+<http://data.archaeology.link/data/spphaefen/bib_Hirte_1987_Archaologie> a ns5:Thesis,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146667,19 +146667,19 @@
     dc:title "Zur Archäologie monoxyler Wasserfahrzeuge im nördlichen Mitteleuropa: eine Studie zur Repräsentativität der Quellen in chorologischer, chronologischer und konzeptioneller Hinsicht: Litteraturverzeichnis"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Lanting_1998_Dates> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Lanting_1998_Dates> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     dc:created "1997"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Lanting_Jan_N> ;
     dc:title "Dates for origin and diffusion of the European logboat"@en ;
-    ns4:issuer <http://www.wikidata.org/entity/Q91015398> ;
-    ns4:pageEnd 650 ;
-    ns4:pageStart 627 ;
+    ns5:issuer <http://www.wikidata.org/entity/Q91015398> ;
+    ns5:pageEnd 650 ;
+    ns5:pageStart 627 ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_Gregory_1997_Comparative> a ns4:Article,
+<http://data.archaeology.link/data/spphaefen/bib_Gregory_1997_Comparative> a ns5:Article,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
@@ -146695,7 +146695,7 @@
     rdfs:label "L. Kröger"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
-<http://data.archaeology.link/data/spphaefen/bib_dbt_mods_00035241> a ns4:BookSection,
+<http://data.archaeology.link/data/spphaefen/bib_dbt_mods_00035241> a ns5:BookSection,
         dcat:Dataset,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
@@ -146703,8 +146703,8 @@
     dc:created "2018"^^xsd:gYear ;
     dc:creator <http://data.archaeology.link/data/spphaefen/author_Kröger_Lars> ;
     dc:title "Within The Network Of Fluvial Ports : Database (csv)"@en ;
-    ns4:doi "10.22032/dbt.35241"^^xsd:string ;
-    ns4:volume "1"^^xsd:string ;
+    ns5:doi "10.22032/dbt.35241"^^xsd:string ;
+    ns5:volume "1"^^xsd:string ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset> a void:Dataset,
@@ -146726,7 +146726,7 @@
     ns6:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
     dcterms:license <http://creativecommons.org/licenses/by-nc-sa/4.0> ;
-    dcterms:modified "2026-03-16T10:51:46"^^xsd:dateTime ;
+    dcterms:modified "2026-03-16T10:53:58"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
