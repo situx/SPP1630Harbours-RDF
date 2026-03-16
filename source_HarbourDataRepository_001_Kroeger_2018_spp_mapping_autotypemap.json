@@ -1,0 +1,358 @@
+{
+  "columns": {
+    "Actors_Activity": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Author": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Comments": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Country": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_10_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_11_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_12_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_13_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_14_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_15_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_16_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_17_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_18_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_19_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_1_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_1_cent_BC": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_20_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_2_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_3_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_4_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_5_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_6_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_7_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_8_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_9_cent_AD": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_max": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Date_min": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Date_pre_1_cent_BC": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_secure": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Date_text": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Hydro_name_hist": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Hydro_name_mod": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Hydro_type": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "ID_place": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:integer",
+      "unique": true
+    },
+    "Latitude": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Locat_precision": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Locat_secure": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Locat_text": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Longitude": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Name_hist": {
+      "category": true,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": true
+    },
+    "Name_mod": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Place_function": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Place_goods_finds": {
+      "category": true,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": true
+    },
+    "Place_hierarchy": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Place_infrastructure": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Place_secure_info": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Place_technique": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Place_topography": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Place_type_general": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Project": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Public": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Ref_hist": {
+      "category": true,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": true
+    },
+    "Ref_mod": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Source_feature_arch": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Source_find_arch": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Source_hist": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:string",
+      "unique": false
+    },
+    "Source_other": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:double",
+      "unique": false
+    },
+    "Status": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:integer",
+      "unique": false
+    },
+    "Year": {
+      "category": false,
+      "prop": "data",
+      "range": "xsd:integer",
+      "unique": false
+    }
+  }
+}
