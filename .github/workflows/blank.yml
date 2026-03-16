@@ -21,7 +21,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     uses: situx/geordfconverter/.github/workflows/geordfconvert.yml@main
     with: 
-        input: HarbourDataRepository_001_Kroeger_2018.csv
+        input: source/HarbourDataRepository_001_Kroeger_2018.csv
         output: docs
         mapping: spp_mapping.json
   
