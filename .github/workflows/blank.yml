@@ -25,6 +25,7 @@ jobs:
         output: docs
         ghpages: true
         mapping: spp_mapping.json
+        bibtex: source/spp.bib
         sepchar: ","
   
   # This workflow contains a single job called "build"  
