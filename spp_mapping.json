@@ -17,7 +17,7 @@
       }
     },
     "Date_min": {"propiri": "http://www.w3.org/2006/time#inXSDgYear","proplabels": {"en": "country","de": "Land"},"prop": "data","order": 1,"range": "http://www.w3.org/2001/XMLSchema#gYear"},
-    "Hydro_name_mod": {"propiri": "http://www.w3.org/2006/time#inXSDgYear","proplabels": {"en": "hydrographic name"},"prop": "obj","order": 1,
+    "Hydro_name_mod": {"proplabels": {"en": "hydrographic name"},"prop": "obj","order": 1,
       "valuemapping": {
         "Achterwasser": "http://www.wikidata.org/entity/Q340980",
         "Adda": "http://www.wikidata.org/entity/Q63109",
