@@ -7,7 +7,12 @@
   "onlyschema":true,
   "columns": {
     "Name_mod": {"propiri": "http://www.w3.org/2000/01/rdf-schema#label","prop": "anno","order": 1},
-    "Project": {"propiri": "http://purl.org/cerif/frapo/isOutputOf","proplabels": {"en": "project"},"prop": "obj"},
+    "Project": {"propiri": "http://purl.org/cerif/frapo/isOutputOf","proplabels": {"en": "project"},"prop": "obj",
+    "valuemapping":{
+      "SPP-Im Netzwerk fluvialer Häfen":"https://gepris.dfg.de/gepris/projekt/198801704",
+      "Binnenhäfen/Inland harbours":"https://gepris.dfg.de/gepris/projekt/219647198"
+    }
+   },
     "Place_technique": {"proplabels": {"en": "place technique"},"prop": "obj","order": 1,
       "valuemapping": {
         "flat-bottomed vessel": "http://www.wikidata.org/entity/Q5457690",
