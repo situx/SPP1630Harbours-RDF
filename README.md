@@ -10,5 +10,5 @@ This dataset can be accessed in the following ways:
 * From an RDF web crawler using its [Vocabulary Of Interlinked Datasets (VOID)](https://www.w3.org/TR/void/) [description](https://archaeolink.github.io/SPP1630Harbours-RDF/void.ttl)  
  
  
- 
+  
  
