@@ -55,7 +55,7 @@
     ]},
     "foundation": {"collection": true, "concept":"http://www.w3.org/2006/time#TemporalEntity","propiri": "http://www.w3.org/2006/time#hasTime","prop": "data","order": 1,"columns":{
         "Date_min": {"propiri": "http://www.w3.org/2006/time#hasBeginning","prop": "data","range":"xsd:gYear","order": 1},
-        "Date_max": {"propiri": "http://www.w3.org/2006/time#hasEnd","prop": "data","range":"xsd:gYear","order": 1}
+        "Date_max": {"propiri": "http://www.w3.org/2006/time#hasEnd","prop": "data","range":"xsd:gYear","order": 1}}
     },
     "Project": {"propiri": "http://purl.org/cerif/frapo/isOutputOf","proplabels": {"en": "project"},"prop": "obj",
     "valuemapping":{
