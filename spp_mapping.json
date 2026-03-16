@@ -1,6 +1,7 @@
 {
     "datanamespace":"http://data.archaeology.link/data/spphaefen/",
     "namespace":"http://www.spp-haefen.de/ont#",
+    "class":{"uri":"http://www.spp-haefen.de/ont#Harbour","labels":{"en":"harbour","de":"Hafen"}},
     "id":"ID_place",
     "columns":{
         "Name_mod": {"propiri":"<http://www.w3.org/2000/01/rdf-schema#label","prop":"anno", "order": 1},
