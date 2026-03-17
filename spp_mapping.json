@@ -7,7 +7,7 @@
   "onlyschema":true,
   "prefixes":{
     "bibo":"http://purl.org/ontology/bibo/",
-    "frapo":"http://purl.org/cerif/frapo/",
+    "frapo":"http://purl.org/cerif/frapo/", 
     "wdt":"http://www.wikidata.org/prop/direct/"
   },
   "columns": {
