@@ -12,8 +12,8 @@
 @prefix ns2: <http://www.spp-haefen.de/ont#> .
 @prefix ns3: <http://purl.org/ontology/bibo/> .
 @prefix ns4: <http://purl.org/cerif/frapo/> .
-@prefix ns5: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ns6: <http://ldf.fi/void-ext#> .
+@prefix ns5: <http://ldf.fi/void-ext#> .
+@prefix ns6: <http://www.w3.org/2006/vcard/ns#> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -3292,13 +3292,13 @@
         <http://data.archaeology.link/data/spphaefen/9_foundation_beginning>,
         <http://data.archaeology.link/data/spphaefen/9_foundation_end> .
 
-<http://data.archaeology.link/data/spphaefen/Person_collection> a ns5:Group,
+<http://data.archaeology.link/data/spphaefen/Person_collection> a ns6:Group,
         <http://www.w3.org/ns/ldp#BasicContainer>,
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Person Instances Collection"@en ;
     void:inDataset <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
-    ns5:hasMember <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS>,
+    ns6:hasMember <http://data.archaeology.link/data/spphaefen/author_Alves_Francisco_JS>,
         <http://data.archaeology.link/data/spphaefen/author_Ammann_Brigitta>,
         <http://data.archaeology.link/data/spphaefen/author_Amstutz_Marco>,
         <http://data.archaeology.link/data/spphaefen/author_Andersen_Soren_H>,
@@ -8567,7 +8567,7 @@
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Linkset: spp_dataset - Vcard Vocabulary (vcard2006:)"@en ;
     void:linkPredicate rdf:type ;
-    void:objectsTarget ns5: ;
+    void:objectsTarget ns6: ;
     void:subjectsTarget <http://data.archaeology.link/data/spphaefen/spp_dataset> ;
     void:triples 1 .
 
@@ -74342,7 +74342,7 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "Property Partition: hasMember"@en ;
-    void:property ns5:hasMember ;
+    void:property ns6:hasMember ;
     void:triples 163 .
 
 <http://data.archaeology.link/data/spphaefen/spp_dataset_hasTime> a void:Dataset,
@@ -146713,20 +146713,20 @@
         <http://www.w3.org/ns/ldp#Container>,
         <http://www.w3.org/ns/ldp#Resource> ;
     rdfs:label "spp_dataset"@en ;
-    ns6:averageLiteralLength 0 ;
-    ns6:averageObjectIRILength 39 ;
-    ns6:averagePropertyIRILength 38 ;
-    ns6:averageSubjectIRILength 55 ;
-    ns6:datatypes 0 ;
-    ns6:distinctBlankNodes 0 ;
-    ns6:distinctIRIReferences 44234 ;
-    ns6:distinctLiterals 0 ;
-    ns6:distinctRDFNodes 44234 ;
-    ns6:languages 0 ;
-    ns6:propertyClasses 0 ;
+    ns5:averageLiteralLength 0 ;
+    ns5:averageObjectIRILength 39 ;
+    ns5:averagePropertyIRILength 38 ;
+    ns5:averageSubjectIRILength 55 ;
+    ns5:datatypes 0 ;
+    ns5:distinctBlankNodes 0 ;
+    ns5:distinctIRIReferences 44234 ;
+    ns5:distinctLiterals 0 ;
+    ns5:distinctRDFNodes 44234 ;
+    ns5:languages 0 ;
+    ns5:propertyClasses 0 ;
     dc:language <http://www.lexvo.org/page/iso639-1/en> ;
     dcterms:license <http://creativecommons.org/licenses/by-nc-sa/4.0> ;
-    dcterms:modified "2026-03-17T11:13:09"^^xsd:dateTime ;
+    dcterms:modified "2026-03-17T11:20:14"^^xsd:dateTime ;
     dcterms:subject <http://dbpedia.org/resource/Location>,
         <http://dbpedia.org/resource/OGC_GeoSPARQL>,
         <http://dbpedia.org/resource/Time>,
@@ -146807,7 +146807,7 @@
     void:rootResource <http://data.archaeology.link/data/spphaefen/Harbour_collection> ;
     void:triples 99492 ;
     void:uriSpace "http://data.archaeology.link/data/spphaefen/"^^xsd:string ;
-    void:vocabulary ns6:,
+    void:vocabulary ns5:,
         dcam:,
         dcmitype:,
         dc:,
