@@ -4,7 +4,7 @@
   "nsprefix":"spp",
   "class": {"uri": "http://www.spp-haefen.de/ont#Harbour","labels": {"en": "harbour","de": "Hafen"}},
   "id": "ID_place",
-  "onlyschema":true,
+  "onlyschema":true, 
   "prefixes":{
     "bibo":"http://purl.org/ontology/bibo/",
     "frapo":"http://purl.org/cerif/frapo/", 
