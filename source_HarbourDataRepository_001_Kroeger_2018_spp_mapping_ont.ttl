@@ -1,0 +1,19 @@
+@prefix ns1: <http://purl.org/vocommons/voaf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.spp-haefen.de/ont#> a ns1:Vocabulary,
+        owl:Ontology ;
+    rdfs:label "http://www.spp-haefen.de/ont# Vocabulary"@en ;
+    vann:preferredNamespacePrefix "ont"^^xsd:anyURI ;
+    vann:preferredNamespaceUri "http://www.spp-haefen.de/ont#"^^xsd:anyURI ;
+    ns1:usageInDataset "http://data.archaeology.link/data/spphaefen/"^^xsd:anyURI .
+
+<http://www.spp-haefen.de/ont#Hydro_name_mod> a owl:ObjectProperty ;
+    rdfs:label "hydrographic name"@en .
+
+<http://www.spp-haefen.de/ont#Place_technique> a owl:ObjectProperty ;
+    rdfs:label "place technique"@en .
+
