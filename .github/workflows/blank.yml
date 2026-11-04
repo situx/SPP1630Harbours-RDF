@@ -36,6 +36,7 @@ jobs:
     with: 
         version: v018
         pythonversion: 3.14
+        debug: true
         rdffilepath: spp_result.ttl
         docpath: docs
         prefixns: http://data.archaeology.link/data/spphaefen/
